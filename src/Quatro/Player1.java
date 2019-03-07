@@ -1,9 +1,7 @@
 package Quatro;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.concurrent.LinkedBlockingQueue;
 
 
 /**
@@ -15,11 +13,115 @@ public class Player1 {
 
     private Tauler meutaulell;
     private Node tree;
+    private Queue<Node> frontera;
+    private int ultimaJugada;
 
-    
     Player1(Tauler entrada){
+        ultimaJugada = -1;
         meutaulell = entrada;
+        frontera = new LinkedBlockingQueue<>();
         tree = new Node(0, false);
+    }
+
+
+    public int[] tirada(int colorin, int formain, int foratin, int tamanyin) {
+        //colorin - Color de la peça a colocar -> 	0 = Blanc 	1 = Negre
+        //formain - Forma de la peça a colocar -> 	0 = Rodona 	1 = Quadrat
+        //foratin - Forat de la peça a colocar -> 	0 = No  	1 = Si
+        //tamanyin - Forat de la peça a colocar -> 0 = Petit 	1 = Gran
+
+        int step = 0;
+        if(ultimaJugada == -1){
+            int[] posIPeca = new int[]{-1, -1, -1};
+            for(int i =0; i < meutaulell.getX(); i++){
+                for(int j = 0; j < meutaulell.getY(); j++){
+                    int valor = meutaulell.getpos(i, j);
+                    if(valor != -1){
+                        step++;
+                        posIPeca[0] = i;
+                        posIPeca[1] = j;
+                        posIPeca[2] = valor;
+                    }
+                }
+            }
+
+            // Pot ser que jugui jo o que jugui ell
+            if(step == 1) { // Ha jugat ell i m'ha donat la peca per situar-la.
+
+                int valUltimaTrobada = posIPeca[2];
+                int tamany = valUltimaTrobada % 2;
+                valUltimaTrobada = valUltimaTrobada / 10;
+                int forat = valUltimaTrobada % 2;
+                valUltimaTrobada = valUltimaTrobada / 10;
+                int forma = valUltimaTrobada % 2;
+                valUltimaTrobada = valUltimaTrobada / 10;
+                int color = valUltimaTrobada % 2;
+
+                // Per tant genero la jugada i situo el node com a primer de l'arbre.
+                tree = new Node(tree, new int[]{posIPeca[0], posIPeca[1], color, forma, forat, tamany });
+            }
+
+            // Situo l'arbre com a primer node a començar a generar.
+            frontera.add(tree);
+        }
+
+        //int nodesToGenerate = calculateNodesToGenerate(step);
+
+        generate(calculateNodesToGenerate(step));
+
+
+/*
+        else {
+
+            // Recopero l'última peça que li he donat.
+            int lastMovement = tree.getNumericPiece();
+
+            // La busco al taulell per saber on l'ha posat
+            int i = 0, j = 0;
+            boolean trobat = false;
+            while (i != meutaulell.getX()) {
+                while (j != meutaulell.getY()) {
+                    if (meutaulell.getpos(i, j) == lastMovement) break;
+                    j++;
+                }
+                i++;
+            }
+
+            // En aquest moment tinc la posició de la peça que li he donat anteriorment.
+            // i = fila,
+            // j = columna.
+            // Haig de buscar la jugada a dins de l'arbre de nodes (si hi és)
+
+            // Si no l'he trobat haig de genarar-la.
+
+
+            // Ho tinc tot llest, seguim fent cerca per triar el node.
+
+
+        }
+
+
+*/
+
+
+        // Calculo el minimax
+        Node value = minIMax(this.tree, 3);
+        int posX = value.piece[0];
+        int posY = value.piece[1];
+
+        tree = value;
+
+        Node toGive = minIMax(tree, 2);
+
+        return new int[]{posX, posY, toGive.piece[2], toGive.piece[3], toGive.piece[4], toGive.piece[5]};
+    }
+
+
+    private int calculateNodesToGenerate(int step){
+        int max = STEPS - step;
+        if(max == STEPS) return (STEPS * (STEPS - 1) * (STEPS -1));
+        else return (max * max * (max -1) * (max - 1));
+
     }
     
     private Node minIMax(Node node, int deep){
@@ -29,7 +131,7 @@ public class Player1 {
             return node; // heuristic(node)
         }
 
-        node.generate();
+        //node.generate();
 
         if(node.isEmpty()) {
             node.evalHeuristic();
@@ -40,6 +142,7 @@ public class Player1 {
             finalValue = new Node(Integer.MAX_VALUE);
             for(Node n : node.nodes){
                 Node value = minIMax(n, deep -1);
+                // Pujo l'heurístic
                 if(finalValue.getHeuristic() > value.getHeuristic()) {
                     n.setHeuristic(value.getHeuristic());
                     finalValue = n;
@@ -50,6 +153,7 @@ public class Player1 {
             finalValue = new Node(Integer.MIN_VALUE);
             for(Node n : node.nodes){
                 Node value = minIMax(n, deep -1);
+                // Pujo l'heurístic
                 if(finalValue.getHeuristic() < value.getHeuristic()) { finalValue = n; n.setHeuristic(value.getHeuristic()); }
             }
         }
@@ -60,27 +164,15 @@ public class Player1 {
         return level == 0;
     }
 
-    public int[] tirada(int colorin, int formain, int foratin, int tamanyin){
-    //colorin - Color de la peça a colocar -> 	0 = Blanc 	1 = Negre
-    //formain - Forma de la peça a colocar -> 	0 = Rodona 	1 = Quadrat
-    //foratin - Forat de la peça a colocar -> 	0 = No  	1 = Si
-    //tamanyin - Forat de la peça a colocar -> 0 = Petit 	1 = Gran
-
-
-        // Li poso la peça al node de l'arbre.
-        tree.setPiece(new int[]{-1, -1, colorin, formain, foratin, tamanyin});
-
-        // Calculo el minimax
-        Node value = minIMax(this.tree, 4);
-        int posX = value.piece[0];
-        int posY = value.piece[1];
-
-        tree = value;
-
-        Node toGive = minIMax(tree, 3);
-
-        return new int[]{posX, posY, toGive.piece[2], toGive.piece[3], toGive.piece[4], toGive.piece[5]};
+    public void generate(int length){
+        for(int i = 0; i < length; i++){
+            Node n = frontera.poll();
+            if(n.getLevel() < STEPS)
+                n.generate(frontera);
+        }
     }
+
+
     
 
     private class Node implements Comparable<Node>{
@@ -100,8 +192,11 @@ public class Player1 {
         }
 
         public Node(int level, boolean isMax){
+            // Aquest constructor només serà cridat per nivell == 0
             this.level = level;
             this.max = isMax;
+            this.heuristic = 0;
+
             // Genero totes les posicions del tauler
             this.perOcupar = new ArrayList<>();
             // GEnero totes les peces que queden per jugar
@@ -112,10 +207,8 @@ public class Player1 {
                 this.perOcupar.add(new int[]{i / 4, i % 4, -1, -1, -1, -1});
                 this.perJugar.add(new int[]{-1, -1, peca.charAt(0) - 48, peca.charAt(1) - 48, peca.charAt(2)- 48, peca.charAt(3)- 48});
             }
-            if(isMax)
-                nodes = new Node[(STEPS - level) * (STEPS - level)];
-            else
-                nodes = new Node[STEPS - level];
+
+            nodes = new Node[STEPS - level];
 
             matriuPuntuació = new int[10][8];
             for(int i  = 0; i < matriuPuntuació.length; i++){
@@ -132,11 +225,9 @@ public class Player1 {
             this.piece = new int[]{jugada[0],jugada[1],jugada[2], jugada[3], jugada[4], jugada[5]};
             this.level = node.level + 1;
             this.max = !node.max;
+            this.heuristic = 0;
 
-            if(node.isMax())
-                nodes = new Node[16-level];
-            else
-                nodes = new Node[(16 - level) * (16 - level)];
+            nodes = new Node[(16 - level) * (16 - level)];
 
             for(int[] casella : node.perOcupar){
                 if(!(casella[0] == jugada[0] && casella[1] == jugada[1])){
@@ -190,15 +281,13 @@ public class Player1 {
             }
         }
 
-
-
-
-        public void generate(){
-            if(max) { // Genero tots els nodes min a sota (posicions tauler lliures + peces per tirar)
+        public void generate(Queue<Node> frontera){
+            if(level != 0) { // Genero tots els nodes min a sota (posicions tauler lliures + peces per tirar)
                 int i = 0;
                 for(int[] pos : perOcupar){
                     for(int[] peca : perJugar){
                         nodes[i] = new Node(this, new int[]{pos[0], pos[1], peca[2], peca[3], peca[4], peca[5]});
+                        frontera.add(nodes[i]);
                         i++;
                     }
                 }
@@ -207,6 +296,7 @@ public class Player1 {
                 int i = 0;
                 for(int[] pos : perOcupar){
                     nodes[i] = new Node(this, new int[]{pos[0], pos[1], piece[2], piece[3], piece[4], piece[5]});
+                    frontera.add(nodes[i]);
                     i++;
                 }
             }
@@ -237,7 +327,12 @@ public class Player1 {
         public int getHeuristic(){
             return this.heuristic;
         }
-        
+
+
+        public int getNumericPiece(){
+            return  piece[2]*1000+piece[3]*100+piece[4]*10+piece[5];
+        }
+
         public boolean isMin(){
             return !max;
         }
