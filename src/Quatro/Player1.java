@@ -20,7 +20,7 @@ public class Player1 {
         ultimaJugada = -1;
         meutaulell = entrada;
         frontera = new LinkedBlockingQueue<>();
-        tree = new Node(0, false);
+        // tree = new Node(0, false);
     }
 
 
@@ -30,6 +30,15 @@ public class Player1 {
         //foratin - Forat de la peça a colocar -> 	0 = No  	1 = Si
         //tamanyin - Forat de la peça a colocar -> 0 = Petit 	1 = Gran
 
+        if(tree == null) {
+            tree = new Node(0, false, new int[]{-1,-1, colorin, formain, foratin, tamanyin});
+            frontera.add(tree);
+        }
+        generate(3360);
+
+        Node node = minIMax(tree, 5);
+
+/*
         int step = 0;
         if(ultimaJugada == -1){
             int[] posIPeca = new int[]{-1, -1, -1};
@@ -68,7 +77,7 @@ public class Player1 {
         //int nodesToGenerate = calculateNodesToGenerate(step);
 
         generate(calculateNodesToGenerate(step));
-
+*/
 
 /*
         else {
@@ -127,11 +136,14 @@ public class Player1 {
     private Node minIMax(Node node, int deep){
         Node finalValue;
         if(enoughtDeep(deep)) {
-            node.evalHeuristic();
+            try {
+                node.evalHeuristic();
+            }
+            catch(Exception e){
+                System.out.println("shit");
+            }
             return node; // heuristic(node)
         }
-
-        //node.generate();
 
         if(node.isEmpty()) {
             node.evalHeuristic();
@@ -141,20 +153,24 @@ public class Player1 {
         if(node.isMin()){
             finalValue = new Node(Integer.MAX_VALUE);
             for(Node n : node.nodes){
-                Node value = minIMax(n, deep -1);
-                // Pujo l'heurístic
-                if(finalValue.getHeuristic() > value.getHeuristic()) {
-                    n.setHeuristic(value.getHeuristic());
-                    finalValue = n;
+                if(n != null){
+                    Node value = minIMax(n, deep -1);
+                    // Pujo l'heurístic
+                    if(finalValue.getHeuristic() > value.getHeuristic()) {
+                        n.setHeuristic(value.getHeuristic());
+                        finalValue = n;
+                    }
                 }
             }
         }
         else {
             finalValue = new Node(Integer.MIN_VALUE);
             for(Node n : node.nodes){
-                Node value = minIMax(n, deep -1);
-                // Pujo l'heurístic
-                if(finalValue.getHeuristic() < value.getHeuristic()) { finalValue = n; n.setHeuristic(value.getHeuristic()); }
+                if(n != null){
+                    Node value = minIMax(n, deep -1);
+                    // Pujo l'heurístic
+                    if(finalValue.getHeuristic() < value.getHeuristic()) { finalValue = n; n.setHeuristic(value.getHeuristic()); }
+                }
             }
         }
         return finalValue;
@@ -191,11 +207,12 @@ public class Player1 {
             this.heuristic = heuristic;
         }
 
-        public Node(int level, boolean isMax){
+        public Node(int level, boolean isMax, int[] piece){
             // Aquest constructor només serà cridat per nivell == 0
             this.level = level;
             this.max = isMax;
             this.heuristic = 0;
+            this.piece = piece;
 
             // Genero totes les posicions del tauler
             this.perOcupar = new ArrayList<>();
@@ -205,10 +222,12 @@ public class Player1 {
                 // Genero totes les peces
                 String peca = Integer.toBinaryString( (1 << 4) | i ).substring( 1 );
                 this.perOcupar.add(new int[]{i / 4, i % 4, -1, -1, -1, -1});
-                this.perJugar.add(new int[]{-1, -1, peca.charAt(0) - 48, peca.charAt(1) - 48, peca.charAt(2)- 48, peca.charAt(3)- 48});
+                int[] jugada = new int[]{-1, -1, peca.charAt(0) - 48, peca.charAt(1) - 48, peca.charAt(2)- 48, peca.charAt(3)- 48};
+                if(!(jugada[2] == piece[2] && jugada[3] == piece[3] && jugada[4] == piece[4] && jugada[5] == piece[5]))
+                    this.perJugar.add(new int[]{-1, -1, jugada[2], jugada[3], jugada[4], jugada[5]});
             }
 
-            nodes = new Node[STEPS - level];
+            nodes = new Node[16*15];
 
             matriuPuntuació = new int[10][8];
             for(int i  = 0; i < matriuPuntuació.length; i++){
@@ -227,7 +246,7 @@ public class Player1 {
             this.max = !node.max;
             this.heuristic = 0;
 
-            nodes = new Node[(16 - level) * (16 - level)];
+            nodes = new Node[((STEPS - node.level) * (STEPS - node.level - 1))];
 
             for(int[] casella : node.perOcupar){
                 if(!(casella[0] == jugada[0] && casella[1] == jugada[1])){
@@ -282,20 +301,11 @@ public class Player1 {
         }
 
         public void generate(Queue<Node> frontera){
-            if(level != 0) { // Genero tots els nodes min a sota (posicions tauler lliures + peces per tirar)
-                int i = 0;
-                for(int[] pos : perOcupar){
-                    for(int[] peca : perJugar){
-                        nodes[i] = new Node(this, new int[]{pos[0], pos[1], peca[2], peca[3], peca[4], peca[5]});
-                        frontera.add(nodes[i]);
-                        i++;
-                    }
-                }
-            }
-            else { // Genero tots els nodes max a sota (posicions tauler lliures)
-                int i = 0;
-                for(int[] pos : perOcupar){
-                    nodes[i] = new Node(this, new int[]{pos[0], pos[1], piece[2], piece[3], piece[4], piece[5]});
+            int i = 0;
+            for(int[] pos : perOcupar){
+                for(int[] peca : perJugar){
+                    //System.out.println("Generem : " + pos[0] +":"+ pos[1] +":"+ peca[2]+":"+ peca[3] +":"+ peca[4] + ":" + peca[5]);
+                    nodes[i] = new Node(this, new int[]{pos[0], pos[1], peca[2], peca[3], peca[4], peca[5]});
                     frontera.add(nodes[i]);
                     i++;
                 }
@@ -316,7 +326,7 @@ public class Player1 {
                     for(int valor : fila){
                         col += valor;
                     }
-                    global += (10 * col) / 12;
+                    global += (10 * col) / 24;
                 }
                 heuristic = Math.round(global);
             }
