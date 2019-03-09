@@ -7,10 +7,9 @@ package Quatro;
 /**
  * * @author Usuari
  */
-public class Player2 {
-    private Tauler meutaulell;
+public class Player2 extends Player{
     Player2(Tauler entrada){
-        meutaulell = entrada;
+        super(entrada);
     }
     public int[] tirada(int colorin, int formain, int foratin, int tamanyin){
      //colorin - Color de la peça a colocar -> 	0 = Blanc 	1 = Negre
