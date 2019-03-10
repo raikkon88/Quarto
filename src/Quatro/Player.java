@@ -9,7 +9,6 @@ public class Player {
     protected Tauler meutaulell;
     protected Node tree;
     protected int ultimaJugada;
-    protected int step;
     protected Random random;
     protected List<int[]> positions;
     protected Set<Integer> pecesGenerades;
@@ -17,7 +16,6 @@ public class Player {
     public Player(Tauler entrada){
         meutaulell = entrada;
         random = new Random();
-        step = 0;
 
         this.positions = new ArrayList<int[]>();
 

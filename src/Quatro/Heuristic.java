@@ -81,7 +81,7 @@ public class Heuristic {
                     this.heuristic =  (int)Math.round((ones * 0.1 + threes * 0.1 + twos * 0.4) * 1000);
                 }
                 else { // EL TORN DE L'ALTREEEE!!!
-                    this.heuristic = (int)Math.round((ones * 0.1 + threes * 0.8 + twos * 0.1) * 1000);
+                    this.heuristic = (int)Math.round((ones * 0.1 + threes * 0.7 + twos * 0.2) * 1000);
                 }
             }
         }

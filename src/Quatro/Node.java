@@ -133,7 +133,7 @@ public class Node {
                 Iterator<Piece> iterator = toPlay.iterator();
                 while (iterator.hasNext()) {
                     Piece next = iterator.next();
-                    if(next.getInt() != this.combination.getInt())
+                    if(next.getInt() != this.combination.getInt() || free.size() == 1)
                         nodes.add(new Node(this, new Combination(p, next)));
                 }
             }

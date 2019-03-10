@@ -34,14 +34,17 @@ public class Player1 extends Player{
         else{
             tree = new Node(tree, new Piece(colorin, formain, foratin, tamanyin), meutaulell);
         }
-        tree = new MinIMax().minIMax(tree, calculateStep(tree.level));
-        //tree = new AlphaBeta().alphaBeta(tree, calculateStep(tree.level), new Node(Integer.MIN_VALUE), new Node(Integer.MAX_VALUE));
+        //tree = new MinIMax().minIMax(tree, calculateStep(tree.level));
+        tree = new AlphaBeta().alphaBeta(tree, calculateStep(tree.level), new Node(Integer.MIN_VALUE), new Node(Integer.MAX_VALUE));
         System.out.println("Heurístic step " + tree.level + " : " + tree.getHeuristic() + " -> " + tree);
         lastHeuristic = tree.getHeuristic();
         ultimaJugada = tree.getCombination().getInt();
-        return tree.getCombination().toIntArray();
-
-
+        if(tree.level > 14){
+            return new int[]{tree.getCombination().x(), tree.getCombination().y(), 1, 1 ,1 ,2};
+        }
+        else{
+            return tree.getCombination().toIntArray();
+        }
     }
 
 
