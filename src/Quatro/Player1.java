@@ -12,12 +12,14 @@ import java.util.*;
  */
 public class Player1 extends Player{
 
-    Player1(Tauler entrada){
+    public Player1(Tauler entrada){
         super(entrada);
         System.out.println("------------------------");
         System.out.println("NEW GAME");
         System.out.println("------------------------");
     }
+
+    int lastHeuristic;
 
     public int[] tirada(int colorin, int formain, int foratin, int tamanyin) {
         //colorin - Color de la peça a colocar  -> 	0 = Blanc 	1 = Negre
@@ -25,61 +27,81 @@ public class Player1 extends Player{
         //foratin - Forat de la peça a colocar  -> 	0 = No  	1 = Si
         //tamanyin - Forat de la peça a colocar ->  0 = Petit 	1 = Gran
 
-
-        if(tree == null) {
-            tree = new Node(0, true, new int[]{colorin, formain, foratin, tamanyin}, random, this.pecesGenerades, this.positions);
-            for(int i = 0; i < 4; i++){
-                for(int j = 0; j < 4; j++){
-                    int val = meutaulell.getpos(i, j);
-                    tree.setValorTauler(i,j,val);
-                    if(val != -1){
-                        step++;
-                    }
-                }
-            }
+        if(isMyFirstStep()) {
+            tree = new Node(0, new Piece(colorin, formain, foratin, tamanyin), meutaulell);
+            // TODO : li he donat una peça repetida a en Bulli.
         }
         else{
-            // Haig de mirar on ha posat la peça que li he entregat anteriorment.
-            int i = 0;
-            boolean trobat = false;
-            while(!trobat && i < 16){
-                trobat = ultimaJugada == meutaulell.getpos(i/4, i%4);
-                i++;
-            }
-            i--;
-
-            // Aquí tinc la posició on va la peça que ha posat l'altre. Actualitzo l'arbre meu
-            tree = new Node(tree, i/4, i%4, new int[]{colorin, formain, foratin, tamanyin}, true);
-            step++;
+            tree = new Node(tree, new Piece(colorin, formain, foratin, tamanyin), meutaulell);
         }
+        tree = new MinIMax().minIMax(tree, calculateStep(tree.level));
+        //tree = new AlphaBeta().alphaBeta(tree, calculateStep(tree.level), new Node(Integer.MIN_VALUE), new Node(Integer.MAX_VALUE));
+        System.out.println("Heurístic step " + tree.level + " : " + tree.getHeuristic() + " -> " + tree);
+        lastHeuristic = tree.getHeuristic();
+        ultimaJugada = tree.getCombination().getInt();
+        return tree.getCombination().toIntArray();
 
-        Collections.shuffle(tree.positions);
+
+    }
 
 
-        //tree = new MinIMax().minIMax(tree, calculateStep(step));
-        tree =new AlphaBeta().alphaBeta(tree, calculateStep(step), new Node(Integer.MIN_VALUE), new Node(Integer.MAX_VALUE));
-        String pos = "[" + tree.combination[0] + "," + tree.combination[1] + "]";
-        String piece = "[" + tree.combination[2] + "," + tree.combination[3] + "," + tree.combination[4] + "," + tree.combination[5] + "]";
-        System.out.println("Heurístic        : " + tree.getHeuristic() + " -> " + step + " -> " + pos + " -> " + piece);
-        ultimaJugada = tree.combination[2]*1000 + tree.combination[3] *100 + tree.combination[4] * 10 + tree.combination[5];
-        step++;
-        return tree.combination;
+    private boolean isMyFirstStep(){
+        return tree == null;
     }
 
     @Override
-    protected int calculateStep(int level){
-        if(level >= 0 || level <= 2){
-            return 3;
+    protected int calculateStep(int level) {
+        if(lastHeuristic < 0)
+            return 1;
+        if (level == 0 || level == 2) {
+            return 2;
+        } else if(level < 10) {
+            return 2;
         }
-        return 3;
-        /*
-        else if(level > 2 && level < 6){
-            return 10;
+        else{
+            return 2;
         }
-        else if(level > 5 && level < 10){
-            return 7;
-        }
-        return 9;*/
     }
 
 }
+
+
+/*
+        boolean youDie = tree.checkYouWin();
+        if(youDie){
+
+            Position killerPosition = new Position(0,0);
+
+            // BUsca la posició on cascar l'altre i palante.
+            int value = tree.getWillEnd();
+            int pos = 0;
+            boolean end = false;
+             // És una fila
+            while(pos < 4 && !end){
+                if(value < 4) {
+                    end = tree.board[value][pos] == -1;
+                    killerPosition = new Position(value, pos);
+                }
+                else if(value < 8) {// És una columna
+                    end = tree.board[pos][value] == -1;
+                    killerPosition = new Position(pos, value);
+                }
+                else if(value == 8){ // és la primera diagonal
+                    end = tree.board[pos][pos] == -1;
+                    killerPosition = new Position(pos, pos);
+                }
+                else{ // És la segona diagonal.
+                    end = tree.board[pos][3-pos] == -1;
+                    killerPosition = new Position(pos, 3 - pos);
+                }
+                pos++;
+            }
+            if(!end) {
+                System.out.println("noi.. no saps programar...");
+            }
+            Iterator<Piece> piece = tree.toPlay.iterator();
+
+            Combination killerCombination = new Combination(killerPosition, piece.next());
+            return killerCombination.toIntArray();
+        }
+        else{*/

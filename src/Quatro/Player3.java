@@ -19,7 +19,7 @@ public class Player3 extends Player{
         //tamanyin - Forat de la peça a colocar ->  0 = Petit 	1 = Gran
 
         // Desordenem tant les peces com les posicions per realitzar actuacions totalment aleatòries.
-        desordena(tree.positions, random);
+      /*  desordena(tree.positions, random);
 
         if(tree == null) {
             tree = new Node(0, true, new int[]{colorin, formain, foratin, tamanyin}, random, this.pecesGenerades, this.positions);
@@ -50,7 +50,8 @@ public class Player3 extends Player{
         tree =new AlphaBeta().alphaBeta(tree, calculateStep(step), new Node(Integer.MIN_VALUE), new Node(Integer.MAX_VALUE));
         ultimaJugada = tree.combination[2]*1000 + tree.combination[3] *100 + tree.combination[4] * 10 + tree.combination[5];
         step++;
-        return tree.combination;
+        return tree.combination;*/
+        return new int[]{0,0,0,0,0,0};
     }
 
     protected int calculateStep(int level){

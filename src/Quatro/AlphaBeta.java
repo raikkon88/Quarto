@@ -15,15 +15,15 @@ public class AlphaBeta {
     public Node alphaBeta(Node node, int deep, Node alfa, Node beta){
         // Node finalValue;
         if(enoughtDeep(deep)) {
-            node.evalHeuristic();
+            node.computeHeuristic();
             return node; // heuristic(node)
         }
 
-        if(!node.isFulla())
+        if(!node.isLeaf())
             node.generate();
 
         if(node.isEmpty()) {
-            node.evalHeuristic();
+            node.computeHeuristic();
             return node; // heuristic(node)
         }
 

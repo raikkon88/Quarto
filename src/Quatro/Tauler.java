@@ -1,5 +1,7 @@
 package Quatro;
 
+import Gil.Gil;
+
 import java.awt.Frame;
 import javax.swing.JOptionPane;
 /*
@@ -23,7 +25,7 @@ public class Tauler {
     private int jugador;
     private Player1 jugador1;
     private long p1time;
-    private Player2 jugador2;
+    private Gil jugador2;
     private long p2time;
 
 
@@ -41,7 +43,7 @@ public class Tauler {
             }
         }
         jugador1 = new Player1(this);
-        jugador2 = new Player2(this);
+        jugador2 = new Gil(this);
         
         this.peça =  new int[4];
         this.peça[0] =(int) java.lang.Math.round( java.lang.Math.random() );
