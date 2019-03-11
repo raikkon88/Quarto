@@ -44,7 +44,7 @@ public class Heuristic {
             i++;
         }
 
-        if(finished){
+       /* if(finished){
             this.heuristic = HEURISTIC_MAX;
         }else{
             boolean willEnd = false;
@@ -59,15 +59,16 @@ public class Heuristic {
                 willEndRow = i - 1;
                 this.heuristic = -50000;
             }
-            else{
+            else{*/
                 //if(finished && node.max ) this.heuristic = -100; // Si puc perdre, puntúo per pedre.
                 //else if(finished && !node.max) this.heuristic = 100; // Si puc guanyar, Puntúo per guanyar.
                 //else {
-                double ones = 0, twos = 0, threes = 0;
+                double ones = 0, twos = 0, threes = 0, fours = 0;
                 for(int row = 0; row < HEU_ROWS ; row++){
                     ones += matrix[row].oneProportion * 0.1;
                     twos += matrix[row].twoProportion * 0.1;
                     threes += matrix[row].threeProportion * 0.1;
+                    fours += matrix[row].fourProportion * 0.1;
                 }
 
                 //Si és el meu torn busco que tingui el màxim de 2's i 4's possibles.
@@ -77,14 +78,18 @@ public class Heuristic {
                 // - Els dos els puntúo amb un 40%
                 // - Els 3's no m'interessen gens, els puntúo amb un 10%
                 // - Els 4's els puntúo amb un 40% -> quants més quatres més maneres de guanyar.
-                if(node.max) { // EL MEU TORRNNN!!!
-                    this.heuristic =  (int)Math.round((ones * 0.1 + threes * 0.1 + twos * 0.4) * 1000);
+
+                this.heuristic =  (int)Math.round((ones * 0.1 + threes * 0.1 + twos * 0.4 + ((fours * 0.4) / node.level * 1000))*100);
+
+                 if(node.max) { // EL MEU TORRNNN!!!
+                    this.heuristic =  (int)Math.round((ones * 0.1 + threes * 0.1 + twos * 0.4 + ((fours * 0.4) / node.level * 100))*100);
                 }
                 else { // EL TORN DE L'ALTREEEE!!!
-                    this.heuristic = (int)Math.round((ones * 0.1 + threes * 0.7 + twos * 0.2) * 1000);
-                }
+                     this.heuristic = (int) Math.round((ones * 0.1 + threes * 0.7 + twos * 0.2) * 1000);
+                 }
+                /*
             }
-        }
+        }*/
         if(node.max){
             this.heuristic *= -1;
         }
@@ -156,113 +161,29 @@ public class Heuristic {
     }
 
 
+/*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*public boolean actualitzaMatriu(int valor, int fila, int col, int[][] matriuResultats){
-        int[] peca = getArrayFromInteger(valor);
-
-        suma4 = actualitzaFilaMatriu(matriuResultats[fila], peca);
-        suma4 = suma4 || actualitzaFilaMatriu(matriuResultats[4+col],peca);
-        if(fila == col){
-            suma4 = suma4 || actualitzaFilaMatriu(matriuResultats[8], peca);
-        }
-        // Miro si actualitzar la contra diagonal
-        if(fila == 3 - col){
-            suma4 = suma4 || actualitzaFilaMatriu(matriuResultats[9], peca);
-        }
-        return suma4;
+    //if(finished && node.max ) this.heuristic = -100; // Si puc perdre, puntúo per pedre.
+    //else if(finished && !node.max) this.heuristic = 100; // Si puc guanyar, Puntúo per guanyar.
+    //else {
+    double ones = 0, twos = 0, threes = 0, fours = 0;
+        for(int row = 0; row < HEU_ROWS ; row++){
+        ones += matrix[row].oneProportion * 0.1;
+        twos += matrix[row].twoProportion * 0.1;
+        threes += matrix[row].threeProportion * 0.1;
+        fours += matrix[row].fourProportion * 0.1;
     }
 
-    public void evalHeuristic(){
-        int [][] matriuResultats = new int[10][8];
-        for(int i = 0; i < 4; i++){
-            for(int j = 0; j < 4; j++){
-                int valor = board[i][j];
-                if(valor != -1){
-                    suma4 = actualitzaMatriu(valor, i, j, matriuResultats);
-                }
-            }
-        }
-        if(suma4){
-            if(max){
-                this.heuristic = -10000;
-            }
-            else{
-                this.heuristic = 10000;
-            }
-        }
-        else {
-            float global = 0;
-            for(int i = 0; i < 10; i++){
-                int suma = 0;
-                for(int j = 0; j < 8; j++){
-                    suma += matriuResultats[i][j];
-                }
-                global += ((((float)suma)/24) * 10);
-            }
+    ones /= node.level;
+    twos /= node.level;
+    threes /= node.level;
+    fours /= node.level;
 
-
-            int valor = combination.getInt();
-
-            boolean acabaRetorn = false;
-            for(int[] posicio : positions){
-                if(acabaRetorn) break;
-                int fila = posicio[0];
-                int col = posicio[1];
-                int [][] matriuResParcial = new int[10][8];
-                if(tauler[fila][col] == -1){
-                    tauler[fila][col] = valor;
-                    acabaRetorn = actualitzaMatriu(valor, fila, col, matriuResParcial);
-                    tauler[fila][col] = -1;
-                }
-            }
-            if(acabaRetorn) {
-                if(max) {
-                    this.heuristic =-10000;
-                }
-                else{
-                    this.heuristic = 10000;
-                }
-            }
-            else {
-                this.heuristic = Math.round(global * 100);
-            }
-
-        }
-
+        if(node.max) { // EL MEU TORRNNN!!!
+        this.heuristic =  (int)Math.round((ones * 0 + threes * 0.1 + twos * 0.3 + fours * 0.6) * 1000);
     }
-
-    public boolean actualitzaFilaMatriu(int[] fila, int[] jugada){
-        fila[0] += jugada[0] == 0 ? 1 : 0;
-        fila[1] += jugada[0];
-        fila[2] += jugada[1] == 0 ? 1 : 0;
-        fila[3] += jugada[1];
-        fila[4] += jugada[2] == 0 ? 1 : 0;
-        fila[5] += jugada[2];
-        fila[6] += jugada[3] == 0 ? 1 : 0;
-        fila[7] += jugada[3];
-
-        // Miro si en aquest node guanyo o perdo.
-        int i =0;
-        boolean suma4 = false;
-        while(i < 8 && !(suma4)){
-            suma4 = fila[i] == 4;
-            i++;
-        }
-        return suma4;
-    }
-*/
+        else { // EL TORN DE L'ALTREEEE!!!
+        this.heuristic = (int)Math.round((ones * 0.2 + threes * 0.7 + twos * 0.1) * 1000);
+    }*/
 
 }

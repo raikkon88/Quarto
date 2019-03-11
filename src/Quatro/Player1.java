@@ -56,13 +56,16 @@ public class Player1 extends Player{
     protected int calculateStep(int level) {
         if(lastHeuristic < 0)
             return 1;
-        if (level == 0 || level == 2) {
+        if (level < 3) {
             return 2;
-        } else if(level < 10) {
-            return 2;
+        } else if(level < 8) {
+            return 3;
+        }
+        else if(level < 10){
+            return 4;
         }
         else{
-            return 2;
+            return 1;
         }
     }
 

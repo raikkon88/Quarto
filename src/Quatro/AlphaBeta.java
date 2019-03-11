@@ -19,8 +19,8 @@ public class AlphaBeta {
             return node; // heuristic(node)
         }
 
-        if(!node.isLeaf())
-            node.generate();
+        //if(!node.isLeaf())
+        node.generate();
 
         if(node.isEmpty()) {
             node.computeHeuristic();
