@@ -216,6 +216,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
+
     // End of variables declaration//GEN-END:variables
 
     

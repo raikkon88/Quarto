@@ -148,7 +148,7 @@ public class Node {
     public Combination getCombination(){
         return this.combination;
     }
-
+/*
     public boolean checkYouWin(){
         this.computeHeuristic();
         return this.heuristic.finished;
@@ -156,16 +156,17 @@ public class Node {
 
     public int getWillEnd(){
         return this.heuristic.willEndRow;
-    }
+    }*/
 
     public boolean isLeaf(){
-        return this.heuristic.getValue() == Heuristic.HEURISTIC_MAX || this.heuristic.getValue() == Heuristic.HEURISTIC_MIN;
+        return this.heuristic.finished;
     }
 
     public int getHeuristic(){
         return this.heuristic.getValue();
     }
 
+    // TODO : NO desordenooo!!!!!
     public void shuffle(){
         //Collections.shuffle(free);
         //Collections.shuffle(toPlay);
