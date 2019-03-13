@@ -61,8 +61,8 @@ public class Piece {
         return fromArrayToInt(getPropertiesArray());
     }
 
-    public static Set<Piece> generateNPieces(int n){
-        Set<Piece> pieces = new HashSet<>();
+    public static List<Piece> generateNPieces(int n){
+        List<Piece> pieces = new ArrayList<>();
         for(int i = 0; i < n; i++){
             String value = Integer.toBinaryString(i);
             pieces.add(new Piece(Integer.valueOf(value)));
@@ -73,7 +73,7 @@ public class Piece {
 
     @Override
     public int hashCode() {
-        return getInt();
+        return (int) Math.random() % 16;
     }
 
     @Override

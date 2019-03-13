@@ -4,7 +4,6 @@ public class Heuristic {
 
     private static final int HEU_ROWS = 10;
     public static final int HEURISTIC_MAX = 100000;
-    public static final int HEURISTIC_MIN = -100000;
 
     int heuristic;
     boolean finished;
@@ -21,42 +20,61 @@ public class Heuristic {
         this.node = node;
     }
 
+    public Heuristic(Heuristic h){
+        this.heuristic = h.heuristic;
+        this.matrix = new HeuristicRow[10];
+        for(int i = 0; i < this.matrix.length; i++){
+            this.matrix[i] = new HeuristicRow(0);
+        }
+    }
+
     public Heuristic(int value){
         this.heuristic = value;
+        this.matrix = new HeuristicRow[HEU_ROWS];
+        for(int i = 0; i < HEU_ROWS; i++){
+            matrix[i] = new HeuristicRow(i);
+        }
     }
 
     public int getValue(){
         return heuristic;
     }
 
+    public boolean add(int value, int f, int c){
+        return updateMatrix(f, c, value);
+    }
+
     public void compute(){
 
-        // El primer que faig és mirar el tauler i muntar l'array amb les files heurístiques.
+        /*// El primer que faig és mirar el tauler i muntar l'array amb les files heurístiques.
         int i = 0;
         while(!finished && i < 4){
             int j = 0;
             while(!finished && j < 4){
-                int value = node.board[i][j];
+                //int value = node.board[i][j];
                 if(value != -1)
-                    finished =  updateMatrix(i, j, value) || finished;
+                    finished =
                 j++;
             }
             i++;
-        }
+        }*/
+        try {
+            if (finished) {
+                // Puntuaré millor guanyar aviat que tard en funció del nivell.
+                this.heuristic = HEURISTIC_MAX * (16 - node.level);
+            } else {
+                // Miro les propietats de la peça que li puc donar.
+                for (HeuristicRow row : matrix) {
+                    this.heuristic += row.finalPoints;
+                }
+            }
 
-        if(finished){
-            // Puntuaré millor guanyar aviat que tard en funció del nivell.
-            this.heuristic = HEURISTIC_MAX * (16 - node.level);
-        }
-        else{
-            // Miro les propietats de la peça que li puc donar.
-            for(HeuristicRow row : matrix){
-                this.heuristic += row.finalPoints;
+            if (node.max) {
+                this.heuristic *= -1;
             }
         }
-
-        if(node.max){
-            this.heuristic *= -1;
+        catch(Exception e){
+            System.out.println(this.heuristic);
         }
 
     }
@@ -153,10 +171,10 @@ public class Heuristic {
 
         @Override
         public String toString() {
-            if(rowName < 4) return "Fila : " + rowName;
-            else if(rowName < 8) return "Columna : " + (rowName - 4);
-            else if(rowName == 8) return "Diagonal 1 ";
-            else return "Diagonal 2";
+            if(rowName < 4) return "Fila : " + rowName + " -> " + value;
+            else if(rowName < 8) return "Columna : " + (rowName - 4) + " -> " + value;
+            else if(rowName == 8) return "Diagonal 1 " + " -> " + value;
+            else return "Diagonal 2" + " -> " + value;
         }
     }
 

@@ -29,7 +29,6 @@ public class Player1 extends Player{
 
         if(isMyFirstStep()) {
             tree = new Node(0, new Piece(colorin, formain, foratin, tamanyin), meutaulell);
-            // TODO : li he donat una peça repetida a en Bulli.
         }
         else{
             tree = new Node(tree, new Piece(colorin, formain, foratin, tamanyin), meutaulell);
@@ -58,10 +57,10 @@ public class Player1 extends Player{
         if (level < 3) {
             return 2;
         } else if(level < 5) {
-            return 3;
+            return 2;
         }
         else if(level < 7){
-            return 3;
+            return 2;
         }
         else if(level < 9){
             return 5;
