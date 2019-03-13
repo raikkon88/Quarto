@@ -3,28 +3,22 @@ package Quatro;
 import java.util.*;
 import java.util.concurrent.LinkedBlockingQueue;
 
+/**
+ * Author : Marc Sànchez Pifarré
+ * Udg Code : u1939705
+ * Classe Node
+ * ------------------------------
+ * TODO : Aplicar un patró template.
+ */
 public class Player {
 
-    protected final int STEPS = 16;
     protected Tauler meutaulell;
     protected Node tree;
+    // S'utilitza per tenir un control de l'última peça que ha posat el contrincant (la deso perquè li he donat jo).
     protected int ultimaJugada;
-    protected Random random;
-    protected List<int[]> positions;
-    protected Set<Integer> pecesGenerades;
 
     public Player(Tauler entrada){
         meutaulell = entrada;
-        random = new Random();
-
-        this.positions = new ArrayList<int[]>();
-
-        this.pecesGenerades = new HashSet<>();
-        for(int i= 0; i < 16; i++){
-            String value = Integer.toBinaryString(i);
-            pecesGenerades.add(Integer.valueOf(value));
-            positions.add(new int[]{i/4, i%4});
-        }
     }
 
     protected int calculateStep(int level){
@@ -43,19 +37,5 @@ public class Player {
 
         return 6;
 
-    }
-
-    protected void desordena(List<int[]> llistat, Random random){
-        // Sacsegem la bossa de posicions per actuar de manera imprevisible.
-        Queue<int[]> tmpPositions = new LinkedBlockingQueue<>();
-        while(!llistat.isEmpty()){
-            int rand =Math.abs(random.nextInt() % llistat.size());
-            tmpPositions.add(llistat.get(rand));
-            llistat.remove(rand);
-        }
-
-        while (!tmpPositions.isEmpty()){
-            llistat.add(tmpPositions.poll());
-        }
     }
 }

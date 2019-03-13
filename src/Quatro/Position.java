@@ -3,6 +3,15 @@ package Quatro;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+/**
+ * Author : Marc Sànchez Pifarré
+ * Udg Code : u1939705
+ * Classe Node
+ * ------------------------------
+ * TODO : Comentar punts crítics.
+ */
 public class Position {
 
     private int x;

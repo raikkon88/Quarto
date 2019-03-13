@@ -3,6 +3,12 @@ package Quatro;
 
 import java.util.*;
 
+/**
+ * Author : Marc Sànchez Pifarré
+ * Udg Code : u1939705
+ * Classe Node
+ * ------------------------------
+ */
 public class Node {
 
     Heuristic heuristic; // Valor de l'heurístic
@@ -130,6 +136,9 @@ public class Node {
         this.toPlay.removeAll(tmp);
     }
 
+    /**
+     * Genera els fills combinant totes les posicions lliures i totes les peces que queden per posar excloent la que li toca posar a la posició escollida
+     */
     public void generate(){
         for(Piece piece : toPlay){
             if(piece.getInt() != this.combination.getInt() || free.size() == 1){
@@ -140,31 +149,60 @@ public class Node {
         }
     }
 
+    /**
+     *
+     * @return Retorna una tupla amb la posició i la peça a posar.
+     */
     public Combination getCombination(){
         return this.combination;
     }
 
+    /**
+     * S'utilitza per la poda heurística
+     * @return Si el node és un node guanyador.
+     */
     public boolean isLeaf(){
         return isFinal;
     }
 
+    /**
+     * Aconseguir el valor de l'heurística per aquest node
+     * - Es pot consultar com es calcula l'heurístic a la classe Heurístic.
+     * @return El valor enter per l'heurístic
+     */
     public int getHeuristic(){
         return this.heuristic.getValue();
     }
 
+    /**
+     * S'empra per barrejar les diferents posicions i les diferents peces que quedden al taulell.
+     * Es fa així per evitar patrons d'actuació donades unes possibilitats.
+     */
     public void shuffle(){
         Collections.shuffle(this.toPlay);
         Collections.shuffle(this.free);
     }
 
+    /**
+     * Que un node sigui min significa que serà maximitzat per el seu pare.
+     * @return Si el node no és un node màxim.
+     */
     public boolean isMin(){
         return !max;
     }
 
+    /**
+     * Un node és empty quan no té fills.
+     * @return Si el nombre de fills == 0
+     */
     public boolean isEmpty(){
         return this.nodes.isEmpty();
     }
 
+    /**
+     * Mètode que s'utilitza per assginar heurístics als nodes pare.
+     * @param value Valor de l'heurísitc a assignar.
+     */
     public void setHeuristic(int value){
         this.heuristic = new Heuristic(value);
     }

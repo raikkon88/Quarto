@@ -1,5 +1,12 @@
 package Quatro;
 
+/**
+ * Author : Marc Sànchez Pifarré
+ * Udg Code : u1939705
+ * Classe Node
+ * ------------------------------
+ * TODO : Comentar punts crítics un cop acabat de fer l'improve de l'heurístic.
+ */
 public class Heuristic {
 
     private static final int HEU_ROWS = 10;

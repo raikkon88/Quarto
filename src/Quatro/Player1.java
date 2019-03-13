@@ -1,14 +1,12 @@
 package Quatro;
 
-import java.util.*;
-import java.util.concurrent.LinkedBlockingQueue;
-
-
-
-import java.util.*;
 
 /**
- * @author Usuari
+ * Author : Marc Sànchez Pifarré
+ * Udg Code : u1939705
+ * Classe Player1
+ * ------------------------------
+ * TODO : Heretar el patró template.
  */
 public class Player1 extends Player{
 
@@ -38,13 +36,14 @@ public class Player1 extends Player{
         // Desordeno les peces i les posicions.
         tree.shuffle();
 
-        //tree = new MinIMax().minIMax(tree, calculateStep(tree.level));
-        // Faig cerca amb poda heurística. (Els nodes guanyadors no generen de més.)
+        // Fem el càlcul de l'algoritme
         tree = new AlphaBeta().alphaBeta(tree, calculateStep(tree.level), new Node(Integer.MIN_VALUE), new Node(Integer.MAX_VALUE));
         System.out.println("Heurístic step " + tree.level + " : " + tree.getHeuristic() + " -> " + tree);
         lastHeuristic = tree.getHeuristic();
         ultimaJugada = tree.getCombination().getInt();
+
         if(tree.level > 14){
+            // Hem de retornar una peça que no existeixi al final de la partida per què el tauler no peti.
             return new int[]{tree.getCombination().x(), tree.getCombination().y(), 1, 1 ,1 ,2};
         }
         else{

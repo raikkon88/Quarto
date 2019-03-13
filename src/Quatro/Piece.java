@@ -2,6 +2,13 @@ package Quatro;
 
 import java.util.*;
 
+/**
+ * Author : Marc Sànchez Pifarré
+ * Udg Code : u1939705
+ * Classe Node
+ * ------------------------------
+ * TODO : Comentar punts crítics.
+ */
 public class Piece {
 
     protected int [] piece;
