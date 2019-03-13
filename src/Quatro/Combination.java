@@ -3,11 +3,11 @@ package Quatro;
 public class Combination extends Piece {
 
     private Position position;
-
+/*
     public Combination(int[] pieceValues) {
         super(pieceValues);
         position = new Position(-1, -1);
-    }
+    }*/
 
     public Combination(Piece piece){
         super(piece);
@@ -18,11 +18,11 @@ public class Combination extends Piece {
         super(piece);
         position = new Position(pos);
     }
-
+/*
     public Combination(int posX, int posY, Piece piece){
         super(piece);
         position = new Position(posX, posY);
-    }
+    }*/
 
 
     public int x(){

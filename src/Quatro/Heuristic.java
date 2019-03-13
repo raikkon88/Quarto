@@ -9,22 +9,20 @@ public class Heuristic {
     boolean finished;
     HeuristicRow[] matrix;
     Node node;
-    int willEndRow;
 
-    public Heuristic(Node node){
-        willEndRow = 0;
+    public Heuristic(Node node, Heuristic h){
+        this.node = node;
         this.matrix = new HeuristicRow[HEU_ROWS];
         for(int i = 0; i < HEU_ROWS; i++){
-            matrix[i] = new HeuristicRow(i);
+            HeuristicRow row = h.matrix[i];
+            matrix[i] = new HeuristicRow(row);
+            this.heuristic += row.finalPoints;
         }
-        this.node = node;
-    }
-
-    public Heuristic(Heuristic h){
-        this.heuristic = h.heuristic;
-        this.matrix = new HeuristicRow[10];
-        for(int i = 0; i < this.matrix.length; i++){
-            this.matrix[i] = new HeuristicRow(0);
+        if(this.finished){
+            this.heuristic = HEURISTIC_MAX * (16 - node.level);
+        }
+        if (node.max) {
+            this.heuristic *= -1;
         }
     }
 
@@ -34,6 +32,7 @@ public class Heuristic {
         for(int i = 0; i < HEU_ROWS; i++){
             matrix[i] = new HeuristicRow(i);
         }
+
     }
 
     public int getValue(){
@@ -45,51 +44,22 @@ public class Heuristic {
     }
 
     public void compute(){
-
-        /*// El primer que faig és mirar el tauler i muntar l'array amb les files heurístiques.
-        int i = 0;
-        while(!finished && i < 4){
-            int j = 0;
-            while(!finished && j < 4){
-                //int value = node.board[i][j];
-                if(value != -1)
-                    finished =
-                j++;
-            }
-            i++;
-        }*/
-        try {
-            if (finished) {
-                // Puntuaré millor guanyar aviat que tard en funció del nivell.
-                this.heuristic = HEURISTIC_MAX * (16 - node.level);
-            } else {
-                // Miro les propietats de la peça que li puc donar.
-                for (HeuristicRow row : matrix) {
-                    this.heuristic += row.finalPoints;
-                }
-            }
-
-            if (node.max) {
-                this.heuristic *= -1;
-            }
-        }
-        catch(Exception e){
-            System.out.println(this.heuristic);
-        }
-
+        // TODO : If wants to do something more on heuristics here is the place.
     }
 
     public boolean updateMatrix(int row, int col, int piece){
-        boolean hasFinalRow = false;
         Piece p = new Piece(piece);
-        hasFinalRow = matrix[row].addValue(p.getProperties()) || hasFinalRow;
-        hasFinalRow = matrix[4+col].addValue(p.getProperties())|| hasFinalRow;
-        if(row == col) hasFinalRow = matrix[8].addValue(p.getProperties()) || hasFinalRow;
-        if(row == 3-col) hasFinalRow = matrix[9].addValue(p.getProperties()) || hasFinalRow;
-
-        return hasFinalRow;
+        finished = matrix[row].addValue(p.getProperties()) || finished;
+        finished = matrix[4+col].addValue(p.getProperties())|| finished;
+        if(row == col) finished = matrix[8].addValue(p.getProperties()) || finished;
+        if(row == 3-col) finished = matrix[9].addValue(p.getProperties()) || finished;
+        return finished;
     }
 
+    @Override
+    public String toString() {
+        return this.heuristic + "  |  " + (this.finished ? "Final" : "No Final");
+    }
 
     // giving a value for each kind of number that can give.
     // If is a 0 -> 1 points.
@@ -122,6 +92,18 @@ public class Heuristic {
             finalPoints = 0;
         }
 
+        public HeuristicRow(HeuristicRow row){
+            this.rowName = row.rowName;
+            this.value = row.value;
+            this.zeros = row.zeros;
+            this.ones = row.ones;
+            this.twos = row.twos;
+            this.threes = row.threes;
+            this.fours = row.fours;
+            this.piecesNumber = row.piecesNumber;
+            this.finalPoints = row.finalPoints;
+        }
+
         public boolean addValue(int properties){
             this.value += properties;
             int copy = value;
@@ -151,19 +133,7 @@ public class Heuristic {
             piecesNumber++;
             return isFinal();
         }
-/*
-        private int digitsCounter(int digit){
-            int apparitions = 0;
-            int copy = value;
-            while (copy > 0){
 
-
-                if(copy % 5 == digit)
-                    apparitions++;
-                copy /= 10;
-            }
-            return apparitions;
-        }*/
 
         public boolean isFinal(){
             return fours > 0;
@@ -177,83 +147,4 @@ public class Heuristic {
             else return "Diagonal 2" + " -> " + value;
         }
     }
-
-    /**
-     *
-     *  if(finished){
-     *             this.heuristic = HEURISTIC_MAX;
-     *         }else{
-     *             boolean willEnd = false;
-     *             i = 0;
-     *             while (!willEnd && i < HEU_ROWS){
-     *                 int res = matrix[i].value + node.combination.getProperties();
-     *                 willEnd = Integer.toString(res).contains("4");
-     *                 i++;
-     *             }
-     *
-     *             if(willEnd) {
-     *                 willEndRow = i - 1;
-     *                 this.heuristic = -50000;
-     *             }
-     *             else{
-     *                 //if(finished && node.max ) this.heuristic = -100; // Si puc perdre, puntúo per pedre.
-     *                 //else if(finished && !node.max) this.heuristic = 100; // Si puc guanyar, Puntúo per guanyar.
-     *                 //else {
-     *                 double ones = 0, twos = 0, threes = 0, fours = 0;
-     *                 for(int row = 0; row < HEU_ROWS ; row++){
-     *                     ones += matrix[row].oneProportion * 0.1;
-     *                     twos += matrix[row].twoProportion * 0.1;
-     *                     threes += matrix[row].threeProportion * 0.1;
-     *                     fours += matrix[row].fourProportion * 0.1;
-     *                 }
-     *
-     *                 //Si és el meu torn busco que tingui el màxim de 2's i 4's possibles.
-     *                 // Tinc la proporció de x/8 per cada possible valor que poden prendre els nodes peró de 1 a 4.
-     *                 // - Els zeros no els puntúo.
-     *                 // - Els uns els puntúo amb un 10%
-     *                 // - Els dos els puntúo amb un 40%
-     *                 // - Els 3's no m'interessen gens, els puntúo amb un 10%
-     *                 // - Els 4's els puntúo amb un 40% -> quants més quatres més maneres de guanyar.
-     *
-     *                 //this.heuristic =  (int)Math.round((ones * 0.1 + threes * 0.1 + twos * 0.4 + ((fours * 0.4) / node.level * 1000))*100);
-     *
-     *                 if(node.max) { // EL MEU TORRNNN!!!
-     *                     this.heuristic =  (int)Math.round((ones * 0.1 + threes * 0.1 + twos * 0.4 + ((fours * 0.4) / node.level * 100))*100);
-     *                 }
-     *                 else { // EL TORN DE L'ALTREEEE!!!
-     *                      this.heuristic = (int) Math.round((ones * 0.1 + threes * 0.7 + twos * 0.2) * 1000);
-     *                  }
-     *             }
-     *         }
-     *         if(!node.max){
-     *             this.heuristic *= -1;
-     *         }
-     */
-
-
-/*
-
-    //if(finished && node.max ) this.heuristic = -100; // Si puc perdre, puntúo per pedre.
-    //else if(finished && !node.max) this.heuristic = 100; // Si puc guanyar, Puntúo per guanyar.
-    //else {
-    double ones = 0, twos = 0, threes = 0, fours = 0;
-        for(int row = 0; row < HEU_ROWS ; row++){
-        ones += matrix[row].oneProportion * 0.1;
-        twos += matrix[row].twoProportion * 0.1;
-        threes += matrix[row].threeProportion * 0.1;
-        fours += matrix[row].fourProportion * 0.1;
-    }
-
-    ones /= node.level;
-    twos /= node.level;
-    threes /= node.level;
-    fours /= node.level;
-
-        if(node.max) { // EL MEU TORRNNN!!!
-        this.heuristic =  (int)Math.round((ones * 0 + threes * 0.1 + twos * 0.3 + fours * 0.6) * 1000);
-    }
-        else { // EL TORN DE L'ALTREEEE!!!
-        this.heuristic = (int)Math.round((ones * 0.2 + threes * 0.7 + twos * 0.1) * 1000);
-    }*/
-
 }

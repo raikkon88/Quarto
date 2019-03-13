@@ -15,7 +15,7 @@ public class MinIMax {
     public Node minIMax(Node node, int deep){
         // Node finalValue;
         if(enoughtDeep(deep)) {
-            node.computeHeuristic();
+            //node.computeHeuristic();
             return node; // heuristic(node)
         }
 
@@ -23,7 +23,7 @@ public class MinIMax {
             node.generate();
 
         if(node.isEmpty()) {
-            node.computeHeuristic();
+            //node.computeHeuristic();
             return node; // heuristic(node)
         }
         Node best;

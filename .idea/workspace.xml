@@ -6,12 +6,14 @@
       <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic$HeuristicRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic$HeuristicRow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Piece.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/AlphaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/AlphaBeta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Combination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Combination.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Quatro/Heuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Heuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/MinIMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/MinIMax.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Quatro/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quatro/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Piece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Quatro/Player1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Player1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Tauler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Tauler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,97 +42,13 @@
     <expand />
     <select />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-2116654420">
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="2105" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="2105" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="5" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Quatro/Player1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="961">
-              <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/Player2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/Heuristic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#1009#1010#0" expanded="true" />
-                <element signature="e#1041#1042#0" expanded="true" />
-                <element signature="e#1091#1092#0" expanded="true" />
-                <element signature="e#1139#1140#0" expanded="true" />
-                <element signature="e#3984#3985#0" expanded="true" />
-                <element signature="e#4024#4025#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/AlphaBeta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#118#119#0" expanded="true" />
-                <element signature="e#151#152#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="690">
+              <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -138,50 +56,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Quatro/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+            <state relative-caret-position="15">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding>
-                <element signature="e#941#942#0" expanded="true" />
-                <element signature="e#998#999#0" expanded="true" />
-                <element signature="e#6516#6517#0" expanded="true" />
-                <element signature="e#6555#6556#0" expanded="true" />
-                <element signature="e#6781#6782#0" expanded="true" />
-                <element signature="e#6827#6828#0" expanded="true" />
-                <element signature="e#6859#6860#0" expanded="true" />
-                <element signature="e#6907#6908#0" expanded="true" />
-                <element signature="e#7083#7084#0" expanded="true" />
-                <element signature="e#7110#7111#0" expanded="true" />
-                <element signature="e#7141#7142#0" expanded="true" />
-                <element signature="e#7184#7185#0" expanded="true" />
-                <element signature="e#7226#7227#0" expanded="true" />
-                <element signature="e#7279#7280#0" expanded="true" />
-                <element signature="e#7325#7326#0" expanded="true" />
-                <element signature="e#7375#7376#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/Combination.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/Piece.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#201#202#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#542#543#0" expanded="true" />
-                <element signature="e#1839#1840#0" expanded="true" />
-                <element signature="e#1870#1871#0" expanded="true" />
+                <element signature="e#899#900#0" expanded="true" />
+                <element signature="e#956#957#0" expanded="true" />
+                <element signature="e#5365#5366#0" expanded="true" />
+                <element signature="e#5404#5405#0" expanded="true" />
+                <element signature="e#5434#5435#0" expanded="true" />
+                <element signature="e#5464#5465#0" expanded="true" />
+                <element signature="e#5496#5497#0" expanded="true" />
+                <element signature="e#5544#5545#0" expanded="true" />
+                <element signature="e#5689#5690#0" expanded="true" />
+                <element signature="e#5716#5717#0" expanded="true" />
+                <element signature="e#5682#5683#0" expanded="true" />
+                <element signature="e#5727#5728#0" expanded="true" />
+                <element signature="e#5834#5835#0" expanded="true" />
+                <element signature="e#5887#5888#0" expanded="true" />
+                <element signature="e#5892#5893#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,13 +82,80 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Quatro/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="199">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#317#318#0" expanded="true" />
                 <element signature="e#341#342#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Combination.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="2" selection-start-line="20" selection-end-line="24" selection-end-column="7" />
+              <folding>
+                <element signature="e#586#587#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
+                <element signature="e#677#678#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Piece.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#201#202#0" expanded="true" />
+                <element signature="e#249#250#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Heuristic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4">
+              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+              <folding>
+                <element signature="e#967#968#0" expanded="true" />
+                <element signature="e#999#1000#0" expanded="true" />
+                <element signature="e#1049#1050#0" expanded="true" />
+                <element signature="e#1097#1098#0" expanded="true" />
+                <element signature="e#1785#1786#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/AlphaBeta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+              <folding>
+                <element signature="e#118#119#0" expanded="true" />
+                <element signature="e#151#152#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/MinIMax.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -232,6 +191,7 @@
       <find>nodes =</find>
       <find>shuffl</find>
       <find>updateBoard</find>
+      <find>updateMatrix</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -253,8 +213,6 @@
         <option value="$PROJECT_DIR$/src/Quatro/PieceAndPos.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Position.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Player3.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Combination.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/MinIMax.java" />
         <option value="$PROJECT_DIR$/src/bulli2/AlfaBeta.java" />
         <option value="$PROJECT_DIR$/src/bulli2/Board.java" />
         <option value="$PROJECT_DIR$/src/bulli2/Node.java" />
@@ -263,21 +221,17 @@
         <option value="$PROJECT_DIR$/src/gil/Gil.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Player.java" />
         <option value="$PROJECT_DIR$/src/gil/Tria.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Tauler.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/AlphaBeta.java" />
         <option value="$PROJECT_DIR$/src/Quatro/UI.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Piece.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Combination.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Tauler.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Player1.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Heuristic.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/MinIMax.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/AlphaBeta.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Node.java" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -286,38 +240,43 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-20" />
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="777" />
+    <option name="x" value="-25" />
+    <option name="y" value="27" />
+    <option name="width" value="1833" />
+    <option name="height" value="879" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Quatro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Quatro" type="462c0819:PsiDirectoryNode" />
+              <item name="Quarto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quarto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Quatro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Quatro" type="462c0819:PsiDirectoryNode" />
+              <item name="Quarto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quarto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Quatro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Quatro" type="462c0819:PsiDirectoryNode" />
+              <item name="Quarto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quarto" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bulli2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quarto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quarto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gil" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Quatro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Quatro" type="462c0819:PsiDirectoryNode" />
+              <item name="Quarto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quarto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Quatro" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -325,13 +284,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552437102337" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552475231230" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -383,11 +343,12 @@
       <workItem from="1552206824635" duration="38420000" />
       <workItem from="1552294939998" duration="4188000" />
       <workItem from="1552381476909" duration="6576000" />
+      <workItem from="1552467584205" duration="7667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163496000" />
+    <option name="totallyTimeSpent" value="171117000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -399,10 +360,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1175" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15670437" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2910902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -411,8 +372,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3591241" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4997233" visible="true" weight="0.4978102" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35850862" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4997233" visible="true" weight="0.5038241" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298279" />
@@ -421,7 +382,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4997233" weight="0.33722627" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5002767" side_tool="true" weight="0.39866155" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3240876" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32313576" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24970828" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -443,21 +404,9 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Quatro/AlphaBeta.java</url>
-          <line>21</line>
+          <line>39</line>
           <properties />
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Quatro/Node.java</url>
-          <line>192</line>
-          <properties />
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Quatro/Node.java</url>
-          <line>133</line>
-          <properties />
-          <option name="timeStamp" value="64" />
+          <option name="timeStamp" value="146" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -498,6 +447,26 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>!node.isLeaf()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.combination.x()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.combination.getInt()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>calculateStep(tree.level)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>16 - node.level</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -522,34 +491,12 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>this.combination.getInt()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>next.getInt()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>copy % 5 == digit</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>p.getProperties()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java" />
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/Quatro/Utils.java" />
-    <entry file="file://$PROJECT_DIR$/src/gil/Gil.java" />
-    <entry file="file://$PROJECT_DIR$/src/gil/Tria.java" />
     <entry file="file://$PROJECT_DIR$/src/bulli/AlfaBeta.java" />
     <entry file="file://$PROJECT_DIR$/src/bulli/Board.java" />
     <entry file="file://$PROJECT_DIR$/src/bulli/Piece.java" />
@@ -559,13 +506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/MinIMax.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
@@ -590,13 +530,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bulli2/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1033">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -639,9 +572,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gil/Gil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
+        <state relative-caret-position="120">
           <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -649,48 +592,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gil/Gil.java">
+    <entry file="file://$PROJECT_DIR$/src/bulli2/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="218" column="4" lean-forward="true" selection-start-line="218" selection-start-column="4" selection-end-line="218" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="393">
+          <caret line="115" column="25" lean-forward="true" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
+    <entry file="file://$PROJECT_DIR$/src/Quatro/ImageRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="961">
-          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Player1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="180">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Piece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="155">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
             <element signature="e#542#543#0" expanded="true" />
-            <element signature="e#1839#1840#0" expanded="true" />
-            <element signature="e#1870#1871#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/List.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="199">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#317#318#0" expanded="true" />
@@ -699,25 +644,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Heuristic.java">
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Player1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-            <element signature="e#3984#3985#0" expanded="true" />
-            <element signature="e#4024#4025#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="690">
+          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/MinIMax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/AlphaBeta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="240">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
           <folding>
             <element signature="e#118#119#0" expanded="true" />
             <element signature="e#151#152#0" expanded="true" />
@@ -725,34 +669,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Heuristic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="e#967#968#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1049#1050#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1785#1786#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Combination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="300">
+          <caret line="20" column="2" selection-start-line="20" selection-end-line="24" selection-end-column="7" />
+          <folding>
+            <element signature="e#586#587#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+        <state relative-caret-position="15">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding>
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#6516#6517#0" expanded="true" />
-            <element signature="e#6555#6556#0" expanded="true" />
-            <element signature="e#6781#6782#0" expanded="true" />
-            <element signature="e#6827#6828#0" expanded="true" />
-            <element signature="e#6859#6860#0" expanded="true" />
-            <element signature="e#6907#6908#0" expanded="true" />
-            <element signature="e#7083#7084#0" expanded="true" />
-            <element signature="e#7110#7111#0" expanded="true" />
-            <element signature="e#7141#7142#0" expanded="true" />
-            <element signature="e#7184#7185#0" expanded="true" />
-            <element signature="e#7226#7227#0" expanded="true" />
-            <element signature="e#7279#7280#0" expanded="true" />
-            <element signature="e#7325#7326#0" expanded="true" />
-            <element signature="e#7375#7376#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#5365#5366#0" expanded="true" />
+            <element signature="e#5404#5405#0" expanded="true" />
+            <element signature="e#5434#5435#0" expanded="true" />
+            <element signature="e#5464#5465#0" expanded="true" />
+            <element signature="e#5496#5497#0" expanded="true" />
+            <element signature="e#5544#5545#0" expanded="true" />
+            <element signature="e#5689#5690#0" expanded="true" />
+            <element signature="e#5716#5717#0" expanded="true" />
+            <element signature="e#5682#5683#0" expanded="true" />
+            <element signature="e#5727#5728#0" expanded="true" />
+            <element signature="e#5834#5835#0" expanded="true" />
+            <element signature="e#5887#5888#0" expanded="true" />
+            <element signature="e#5892#5893#0" expanded="true" />
           </folding>
         </state>
       </provider>

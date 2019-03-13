@@ -15,7 +15,6 @@ public class AlphaBeta {
     public Node alphaBeta(Node node, int deep, Node alfa, Node beta){
         // Node finalValue;
         if(enoughtDeep(deep)) {
-            node.computeHeuristic();
             return node; // heuristic(node)
         }
 
@@ -23,7 +22,6 @@ public class AlphaBeta {
             node.generate();
 
         if(node.isEmpty()) {
-            node.computeHeuristic();
             return node; // heuristic(node)
         }
 
