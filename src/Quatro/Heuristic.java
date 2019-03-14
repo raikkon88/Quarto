@@ -51,6 +51,7 @@ public class Heuristic {
     }
 
     public void compute(){
+
         // TODO : If wants to do something more on heuristics here is the place.
     }
 

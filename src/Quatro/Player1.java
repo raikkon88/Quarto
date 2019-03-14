@@ -64,7 +64,7 @@ public class Player1 extends Player{
             return 3;
         }
         else if(level < 7){
-            return 4;
+            return 5;
         }
         else if(level < 9){
             return 6;
