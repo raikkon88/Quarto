@@ -22,7 +22,7 @@ public class Tauler {
     private int[][] taulell;
     private int[] peça;
     private int jugador;
-    private Player1 jugador1;
+    private MarcSanchez.Player1 jugador1;
     private long p1time;
     private roger.Player1 jugador2;
     private long p2time;
@@ -41,7 +41,7 @@ public class Tauler {
                 this.taulell[i][j]=-1;
             }
         }
-        jugador1 = new Player1(this);
+        jugador1 = new MarcSanchez.Player1(this);
         jugador2 = new roger.Player1(this);
         
         this.peça =  new int[4];
