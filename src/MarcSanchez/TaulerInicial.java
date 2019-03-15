@@ -30,7 +30,7 @@ public class TaulerInicial extends Node{
     }
 
     @Override
-    protected Heuristic iisLeaf() {
+    protected Heuristic ieval() {
         return new Heuristic(this.firstPiece);
     }
 

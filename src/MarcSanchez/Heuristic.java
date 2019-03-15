@@ -26,15 +26,6 @@ public class Heuristic {
         }
     }
 
-
-    public int getPieceValue(){
-        return this.nextPiece.getInt();
-    }
-
-    public void setNextPiece(Piece p){
-        this.nextPiece = p;
-    }
-
     public int getValue(int level, boolean isMax){
         if(this.finished){
             this.heuristic = HEURISTIC_MAX * (16 - level);
@@ -48,20 +39,19 @@ public class Heuristic {
         if (isMax) {
             this.heuristic  *= -1;
         }
-
         return this.heuristic;
     }
 
-    public void add(int value, int f, int c){
-        updateMatrix(f, c, value);
+    public Piece getPiece(){
+        return this.nextPiece;
     }
 
-    public void updateMatrix(int row, int col, int piece){
-        Piece p = new Piece(piece);
-        finished = matrix[row].addValue(p.getProperties()) || finished;
-        finished = matrix[4+col].addValue(p.getProperties()) || finished;
-        if(row == col) finished = matrix[8].addValue(p.getProperties()) || finished;
-        if(row == 3-col) finished = matrix[9].addValue(p.getProperties()) || finished;
+
+    public void add(int row, int col, Piece piece){
+        finished = matrix[row].addValue(piece.getProperties()) || finished;
+        finished = matrix[4+col].addValue(piece.getProperties()) || finished;
+        if(row == col) finished = matrix[8].addValue(piece.getProperties()) || finished;
+        if(row == 3-col) finished = matrix[9].addValue(piece.getProperties()) || finished;
     }
 
     @Override

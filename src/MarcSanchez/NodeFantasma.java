@@ -24,7 +24,7 @@ public class NodeFantasma extends Node {
     }
 
     @Override
-    protected Heuristic iisLeaf() {
+    protected Heuristic ieval() {
         return null;
     }
 

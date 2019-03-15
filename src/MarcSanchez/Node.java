@@ -40,7 +40,7 @@ public abstract class Node {
 
     public abstract boolean isLeaf();
 
-    protected abstract Heuristic iisLeaf();
+    protected abstract Heuristic ieval();
 
     public void generate(){
 

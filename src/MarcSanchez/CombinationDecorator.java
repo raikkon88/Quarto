@@ -22,36 +22,35 @@ public class CombinationDecorator extends Decorator {
     @Override
     public Heuristic evalHeuristic() {
 
-        Heuristic tmp = decorated.evalHeuristic();
+        if(heuristic == null){
+            this.heuristic = decorated.ieval();
+            heuristic.add(this.position.x(), this.position.y(), heuristic.getPiece());
+            heuristic.nextPiece = new Piece(this.piece);
+            // TODO : Els heurísitcs es calculen malament. EL valor de les propietats de la peca crec que està malament.
+        }
+        return heuristic;
 
-        // Rebo la peça de baix i tinc la posició aquí mateix.
-        tmp.add(tmp.getPieceValue(), this.position.x(), this.position.y());
-        tmp.setNextPiece(this.piece);
-
-        // Retorno la peça que tinc jo i la suma  del que porto acumolat.
-        return tmp;
     }
 
     @Override
     public int getHeuristic() {
-        if(decorated != null) {
-            this.heuristic = evalHeuristic();
-            return heuristic.getValue(this.level, this.max);
+        if(this.heuristic == null){
+            evalHeuristic();
         }
-        else{
-            return heuristicValue;
-        }
+        return this.heuristic.getValue(this.level, this.max);
     }
 
     @Override
     public boolean isLeaf() {
-        return decorated.iisLeaf().finished;
+        if(this.heuristic == null)
+            evalHeuristic();
+        return this.heuristic.finished;
     }
 
     @Override
-    protected Heuristic iisLeaf(){
-        Heuristic h = decorated.iisLeaf();
-        h.add(h.nextPiece.getInt(), this.position.x(), this.position.y());
+    protected Heuristic ieval(){
+        Heuristic h = decorated.ieval();
+        h.add(this.position.x(), this.position.y(), h.getPiece());
         h.nextPiece = new Piece(this.piece);
         return h;
     }
