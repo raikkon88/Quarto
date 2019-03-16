@@ -50,10 +50,6 @@ public class Heuristic {
         return updateMatrix(f, c, value);
     }
 
-    public void compute(){
-
-        // TODO : If wants to do something more on heuristics here is the place.
-    }
 
     public boolean updateMatrix(int row, int col, int piece){
         Piece p = new Piece(piece);

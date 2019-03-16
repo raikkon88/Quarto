@@ -79,7 +79,6 @@ public class Heuristic {
 
 
         public HeuristicRow(int rowValue){
-            this.rowName = rowValue;
             value = 0;
             zeros = 0;
             ones = 0;
@@ -90,7 +89,7 @@ public class Heuristic {
             finalPoints = 0;
         }
 
-        public HeuristicRow(HeuristicRow row){
+       /* public HeuristicRow(HeuristicRow row){
             this.rowName = row.rowName;
             this.value = row.value;
             this.zeros = row.zeros;
@@ -100,7 +99,7 @@ public class Heuristic {
             this.fours = row.fours;
             this.piecesNumber = row.piecesNumber;
             this.finalPoints = row.finalPoints;
-        }
+        }*/
 
         public boolean addValue(int properties){
             this.value += properties;
