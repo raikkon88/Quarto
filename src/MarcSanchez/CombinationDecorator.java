@@ -24,7 +24,7 @@ public class CombinationDecorator extends Decorator {
 
         if(heuristic == null){
             this.heuristic = decorated.ieval();
-            heuristic.add(this.position.x(), this.position.y(), heuristic.getPiece());
+            heuristic.add(this.position.x(), this.position.y(), heuristic.getPiece(), this.max);
             heuristic.nextPiece = new Piece(this.piece);
             // TODO : Els heurísitcs es calculen malament. EL valor de les propietats de la peca crec que està malament.
         }
@@ -50,7 +50,7 @@ public class CombinationDecorator extends Decorator {
     @Override
     protected Heuristic ieval(){
         Heuristic h = decorated.ieval();
-        h.add(this.position.x(), this.position.y(), h.getPiece());
+        h.add(this.position.x(), this.position.y(), h.getPiece(), this.max);
         h.nextPiece = new Piece(this.piece);
         return h;
     }

@@ -20,26 +20,37 @@ public class Player1 extends Player {
     public int[] tirada(int colorin, int formain, int foratin, int tamanyin) {
 
         Set<Piece> toPlay = Piece.generateNPieces(16);
-        Set<Position> free = new HashSet<>();
+        Set<Position> free = Position.generateNPositions(4, 4);
 
         Piece in = new Piece(colorin, formain, foratin, tamanyin);
         toPlay.remove(in);
 
-        tree = new TaulerInicial(in);
-
+        // TODO : Estic proposant peces repetides... k'estic liant a algun lloc i no sé veure on...
+        Position p = null;
+        boolean first = true;
         for(int i = 0; i < 4; i++){
             for(int j = 0; j < 4; j++){
                 int value = meutaulell.getpos(i, j);
                 if(value != -1){
-                    tree = new CombinationDecorator(tree, new Position(i,j), new Piece(value));
+                    free.remove(new Position(i, j));
+                    if(first) {
+                        this.tree = new TaulerInicial(new Piece(value));
+                        first = false;
+                    }
+                    else{
+                        tree = new CombinationDecorator(tree, new Position(p), new Piece(value));
+                    }
                     toPlay.remove(new Piece(value));
-                }
-                else {
-                    free.add(new Position(i,j));
+                    p = new Position(i,j);
                 }
             }
         }
-        tree.setPiece(in);
+        if(tree == null){
+            tree = new TaulerInicial(in);
+        }
+        else{
+            tree = new CombinationDecorator(tree, p, in);
+        }
         tree.setPieces(toPlay);
         tree.setFreePositions(free);
 
@@ -50,7 +61,6 @@ public class Player1 extends Player {
         System.out.println("Heurístic : " + tree.heuristic);
         System.out.println("Posició : " + tree.getResult()[0] + " , " + tree.getResult()[1]);
         System.out.println("Peça que entrego : " + tree.piece);
-
         return tree.getResult();
     }
 

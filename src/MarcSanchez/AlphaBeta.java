@@ -74,7 +74,6 @@ public class AlphaBeta {
                     alfa = n;
                     n.setHeuristic(value.getHeuristic());
                 }
-
             }
             return alfa;
         }

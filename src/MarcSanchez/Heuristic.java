@@ -22,7 +22,7 @@ public class Heuristic {
         this.nextPiece = new Piece(value);
         this.matrix = new HeuristicRow[HEU_ROWS];
         for(int i = 0; i < HEU_ROWS; i++){
-            matrix[i] = new HeuristicRow(i);
+            matrix[i] = new HeuristicRow();
         }
     }
 
@@ -37,7 +37,7 @@ public class Heuristic {
         }
 
         if (isMax) {
-            this.heuristic  *= -1;
+            this.heuristic *= -1;
         }
         return this.heuristic;
     }
@@ -47,11 +47,11 @@ public class Heuristic {
     }
 
 
-    public void add(int row, int col, Piece piece){
-        finished = matrix[row].addValue(piece.getProperties()) || finished;
-        finished = matrix[4+col].addValue(piece.getProperties()) || finished;
-        if(row == col) finished = matrix[8].addValue(piece.getProperties()) || finished;
-        if(row == 3-col) finished = matrix[9].addValue(piece.getProperties()) || finished;
+    public void add(int row, int col, Piece piece, boolean isMax){
+        finished = matrix[row].addValue(piece.getProperties(), isMax) || finished;
+        finished = matrix[4+col].addValue(piece.getProperties(), isMax) || finished;
+        if(row == col) finished = matrix[8].addValue(piece.getProperties(), isMax) || finished;
+        if(row == 3-col) finished = matrix[9].addValue(piece.getProperties(), isMax) || finished;
     }
 
     @Override
@@ -66,21 +66,18 @@ public class Heuristic {
     // If is a 3 -> 1000 points
     public class HeuristicRow {
 
-        int rowName;
         int value;
         int finalPoints;
         int piecesNumber;
 
-        int zeros;
         int ones;
         int twos;
         int threes;
         int fours;
 
 
-        public HeuristicRow(int rowValue){
+        public HeuristicRow(){
             value = 0;
-            zeros = 0;
             ones = 0;
             twos = 0;
             threes = 0;
@@ -89,28 +86,12 @@ public class Heuristic {
             finalPoints = 0;
         }
 
-       /* public HeuristicRow(HeuristicRow row){
-            this.rowName = row.rowName;
-            this.value = row.value;
-            this.zeros = row.zeros;
-            this.ones = row.ones;
-            this.twos = row.twos;
-            this.threes = row.threes;
-            this.fours = row.fours;
-            this.piecesNumber = row.piecesNumber;
-            this.finalPoints = row.finalPoints;
-        }*/
-
-        public boolean addValue(int properties){
+        public boolean addValue(int properties, boolean isMax){
             this.value += properties;
             int copy = value;
             while (copy > 0){
                 int partial = copy % 5;
-                if(partial == 0){
-                    zeros++;
-                    finalPoints+=1;
-                }
-                else if(partial == 1){
+                if(partial == 1){
                     ones++;
                     finalPoints += 10;
                 }
@@ -120,7 +101,10 @@ public class Heuristic {
                 }
                 else if(partial == 3){
                     threes++;
-                    finalPoints += 1000;
+                    if(!isMax)
+                        finalPoints += 10000;
+                    else
+                        finalPoints += 100;
                 }
                 else{
                     fours++;
@@ -138,10 +122,8 @@ public class Heuristic {
 
         @Override
         public String toString() {
-            if(rowName < 4) return "Fila : " + rowName + " -> " + value;
-            else if(rowName < 8) return "Columna : " + (rowName - 4) + " -> " + value;
-            else if(rowName == 8) return "Diagonal 1 " + " -> " + value;
-            else return "Diagonal 2" + " -> " + value;
+            return  "VALUE = " + value + " | 1s = " + ones + " | 2s = " + twos +
+                    " | 3s = " + threes + " | 4s = " + fours + " -----> (" + finalPoints + ")";
         }
     }
 }

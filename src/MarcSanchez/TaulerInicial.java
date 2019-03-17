@@ -11,7 +11,6 @@ public class TaulerInicial extends Node{
         this.level = 0;
         this.nodes = new HashSet<>();
         this.max = true;
-        this.heuristic = new Heuristic(this.firstPiece);
     }
 
     @Override

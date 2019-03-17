@@ -56,7 +56,7 @@ public class Piece {
                 noForadada * 1000 +
                 foradada * 100 +
                 petita * 10 +
-                negre;
+                gran;
     }
 
 

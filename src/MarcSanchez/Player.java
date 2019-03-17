@@ -25,16 +25,13 @@ public class Player {
             return 1;
         }
         else if(level > 2 && level < 6){
-            return 3;
+            return 4;
         }
         else if(level > 5 && level < 10){
-            return 5;
+            return 6;
         }
-        else if(level == 10){
-            return 8;
-        }
-
-        return 6;
+        else
+            return 16 - level - 1;
 
     }
 }
