@@ -1,18 +1,17 @@
 package MarcSanchez;
 
-
-
 import Quatro.Tauler;
 
 import java.util.Iterator;
 import java.util.Set;
 
-public class Player1 extends Player {
+public class Player2 extends Player {
+
 
 
     protected Node tree;
 
-    public Player1(Tauler entrada) {
+    public Player2(Tauler entrada) {
         super(entrada);
     }
 
@@ -25,7 +24,7 @@ public class Player1 extends Player {
             return 3;
         }
         else if(level >= 4  && level < 6){
-            return 3;
+            return 4;
         }
         else if(level >= 6 && level < 8){
             return 5;
@@ -106,8 +105,6 @@ public class Player1 extends Player {
 
         return tree.getResult();
     }
-
-
 
 
 

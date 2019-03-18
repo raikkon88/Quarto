@@ -10,7 +10,7 @@ import Quatro.Tauler;
  * ------------------------------
  * TODO : Aplicar un patró template.
  */
-public class Player {
+public abstract class Player {
 
     protected Tauler meutaulell;
     protected Node tree;
@@ -20,21 +20,6 @@ public class Player {
         meutaulell = entrada;
     }
 
-    protected int calculateStep(int level){
-        if(level >= 0 && level < 2){
-            return 2;
-        }
-        else if(level >= 2 && level < 4){
-            return 3;
-        }
-        else if(level >= 4  && level < 6){
-            return 4;
-        }
-        else if(level >= 6 && level < 8){
-            return 5;
-        }
-        else {
-            return 8;
-        }
-    }
+    protected abstract int calculateStep(int level);
+
 }

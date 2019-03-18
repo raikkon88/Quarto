@@ -62,19 +62,19 @@ public class Heuristic {
     }
 
     // giving a value for each kind of number that can give.
-    // If is a 0 -> 1 points.
-    // If is a 1 -> 10 points
-    // If is a 2 -> 100 points
-    // If is a 3 -> 1000 points
+    // If is a 0 -> 2 points.
+    // If is a 1 -> 3 points
+    // If is a 2 -> 5 points
+    // If is a 4 -> 8 points
+    // If is a 3 -> 0 points
     public class HeuristicRow {
 
         int value;
         int finalPoints;
-        int piecesNumber;
 
         int ones;
         int twos;
-        int threes;
+        int zeros;
         int fours;
 
 
@@ -82,9 +82,8 @@ public class Heuristic {
             value = 0;
             ones = 0;
             twos = 0;
-            threes = 0;
+            zeros = 0;
             fours = 0;
-            piecesNumber = 0;
             finalPoints = 0;
         }
 
@@ -95,28 +94,22 @@ public class Heuristic {
                 int partial = copy % 5;
                 if(partial == 1){
                     ones++;
-                    finalPoints += 10;
                 }
                 else if(partial == 2){
                     twos++;
-                    finalPoints += 100;
                 }
-                else if(partial == 3){
-                    threes++;
-                    if(!isMax)
-                        finalPoints += 10000;
-                    else
-                        finalPoints += 100;
+                else if(partial == 0){
+                    zeros++;
                 }
                 else if (partial == 4){
                     fours++;
                 }
                 else {
-                    // Nothing to do, we don't want to evaluate the 0's.
+                    // Nothing to do, we don't want to evaluate the 3's.
                 }
                 copy /= 10;
             }
-            piecesNumber++;
+            finalPoints = zeros * 1 + ones * 1 + (4 * fours) + (3 * twos);
             return isFinal();
         }
 
@@ -127,8 +120,8 @@ public class Heuristic {
 
         @Override
         public String toString() {
-            return  "VALUE = " + value + " | 1s = " + ones + " | 2s = " + twos +
-                    " | 3s = " + threes + " | 4s = " + fours + " -----> (" + finalPoints + ")";
+            return  "VALUE = " + value + " | 0s = " + zeros + " | 1s = " + ones + " | 2s = " + twos +
+                    " | 4s = " + fours + " -----> (" + finalPoints + ")";
         }
     }
 }
