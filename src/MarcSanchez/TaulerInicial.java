@@ -14,6 +14,11 @@ public class TaulerInicial extends Node{
     }
 
     @Override
+    public void alterOrder() {
+        this.max = !this.max;
+    }
+
+    @Override
     public int getHeuristic() {
         return 0;
     }

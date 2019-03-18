@@ -27,17 +27,14 @@ public class Player {
         else if(level >= 2 && level < 4){
             return 2;
         }
-        else if(level >= 4  && level < 6){
-            return 3;
-        }
-        else if(level >= 6 && level < 8){
+        else if(level >= 4  && level < 8){
             return 4;
         }
         else if(level >= 8 && level < 10){
-            return 5;
+            return 16;
         }
         else
-            return 16 - level - 1;
+            return 8;
 
     }
 }

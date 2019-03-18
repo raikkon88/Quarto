@@ -9,6 +9,11 @@ public class NodeFantasma extends Node {
     }
 
     @Override
+    public void alterOrder() {
+        // Nothing to do
+    }
+
+    @Override
     public int getHeuristic() {
         return heuristic;
     }

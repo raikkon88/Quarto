@@ -4,26 +4,15 @@
     <list default="true" id="a5384845-3a8c-45e6-aeaa-80bd8c5cc899" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/CombinationDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/CombinationDecorator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Heuristic$HeuristicRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Heuristic$HeuristicRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Heuristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Heuristic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/NodeFantasma.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/NodeFantasma.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Piece.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Player1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Player1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Position.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/TaulerInicial.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/TaulerInicial.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Tauler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Tauler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Heuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Heuristic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Piece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Player1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Player1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quatro/Player1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Player1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Quatro/Tauler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Tauler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -67,20 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -88,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="195">
+              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
               <folding>
                 <element signature="e#132#133#0" expanded="true" />
                 <element signature="e#174#175#0" expanded="true" />
@@ -101,22 +78,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="255">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding>
+                <element signature="e#323#324#0" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
                 <element signature="e#500#501#0" expanded="true" />
                 <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#577#578#0" expanded="true" />
                 <element signature="e#630#631#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Player1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="59" column="65" lean-forward="true" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
+            <state relative-caret-position="360">
+              <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="50" column="74" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+            <state relative-caret-position="385">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
               <folding>
                 <element signature="e#447#448#0" expanded="true" />
                 <element signature="e#483#484#0" expanded="true" />
@@ -140,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="223">
+              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#827#828#0" expanded="true" />
@@ -163,8 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Heuristic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+            <state relative-caret-position="1665">
+              <caret line="113" selection-start-line="110" selection-start-column="21" selection-end-line="113" />
               <folding>
                 <element signature="e#1647#1648#0" expanded="true" />
                 <element signature="e#1678#1679#0" expanded="true" />
@@ -260,15 +252,15 @@
         <option value="$PROJECT_DIR$/src/MarcSanchez/Position.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Piece.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/AlphaBeta.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/Player1.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/Node.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Player1.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Heuristic.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/Player.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Tauler.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/Player.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/Node.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/Player1.java" />
       </list>
     </option>
   </component>
@@ -336,7 +328,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552908167350" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552910182593" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -399,7 +391,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212559000" />
+    <option name="totallyTimeSpent" value="214571000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -423,15 +415,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.3546845" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997233" weight="0.3957935" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.3546845" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997233" visible="true" weight="0.3957935" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.32846716" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49919224" weight="0.32846716" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4997233" weight="0.33693305" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4997233" weight="0.33652008" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50080776" side_tool="true" weight="0.35766423" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32026768" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -461,22 +453,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MarcSanchez/Player1.java</url>
-          <line>55</line>
+          <line>21</line>
           <properties />
-          <option name="timeStamp" value="256" />
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MarcSanchez/Player1.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="265" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="tree.isLeaf()" language="JAVA" />
-        <watch expression="n.isLeaf()" language="JAVA" />
-        <watch expression="tree.isLeaf()" language="JAVA" />
-        <watch expression="node.isLeaf()" language="JAVA" />
-        <watch expression="this.nodes[0].isLeaf()" language="JAVA" />
-        <watch expression="node.isLeaf()" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -824,58 +812,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Player1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="e#132#133#0" expanded="true" />
-            <element signature="e#174#175#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Heuristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-          <folding>
-            <element signature="e#1647#1648#0" expanded="true" />
-            <element signature="e#1678#1679#0" expanded="true" />
-            <element signature="e#1724#1725#0" expanded="true" />
-            <element signature="e#1811#1812#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,17 +826,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java">
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Heuristic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="1665">
+          <caret line="113" selection-start-line="110" selection-start-column="21" selection-end-line="113" />
+          <folding>
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1811#1812#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Player1.java">
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="59" column="65" lean-forward="true" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
+        <state relative-caret-position="750">
+          <caret line="50" column="74" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -905,8 +851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        <state relative-caret-position="385">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
           <folding>
             <element signature="e#447#448#0" expanded="true" />
             <element signature="e#483#484#0" expanded="true" />
@@ -914,10 +860,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        <state relative-caret-position="223">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#132#133#0" expanded="true" />
+            <element signature="e#174#175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding>
+            <element signature="e#323#324#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Player1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

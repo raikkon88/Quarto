@@ -4,6 +4,7 @@ package MarcSanchez;
 
 import Quatro.Tauler;
 
+import java.util.Iterator;
 import java.util.Set;
 
 public class Player1 extends Player {
@@ -24,7 +25,6 @@ public class Player1 extends Player {
         Piece in = new Piece(colorin, formain, foratin, tamanyin);
         toPlay.remove(in);
 
-        // TODO : Estic proposant peces repetides... k'estic liant a algun lloc i no sé veure on...
         Position p = null;
         boolean first = true;
         for(int i = 0; i < 4; i++){
@@ -53,7 +53,24 @@ public class Player1 extends Player {
         tree.setPieces(toPlay);
         tree.setFreePositions(free);
 
-        tree = new AlphaBeta().alphaBeta(tree, calculateStep(tree.getLevel()), new NodeFantasma(Integer.MIN_VALUE), new NodeFantasma(Integer.MAX_VALUE));
+        // Comprovem si estic com a player 1 o com a player 2.
+        if(free.size() % 2 == 1){ // Nombre imparell de peces al tauler estic com a player 2
+            // S'ha de girar el max / min dels nodes de l'arbre.
+            tree.alterOrder();
+        }
+        if(toPlay.size() == 0){
+            if(free.size() > 1){
+                System.out.println("it can't be possible... ");
+            }
+            else{
+                Iterator<Position> position = free.iterator();
+                Position lastPosition = position.next();
+                return new int[]{lastPosition.x(), lastPosition.y(), 2,2,2,2};
+            }
+        }
+        else{
+            tree = new AlphaBeta().alphaBeta(tree, calculateStep(tree.getLevel()), new NodeFantasma(Integer.MIN_VALUE), new NodeFantasma(Integer.MAX_VALUE));
+        }
 
         System.out.println("-----------------------------------------------");
         System.out.println("MARC -> " + tree);

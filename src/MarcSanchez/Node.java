@@ -19,6 +19,8 @@ public abstract class Node {
     public boolean isMax(){return max;}
     public void setHeuristic(int heuristic){ this.heuristicValue= heuristic;}
 
+    public abstract void alterOrder();
+
     public boolean isEmpty(){
         return nodes.isEmpty();
     }

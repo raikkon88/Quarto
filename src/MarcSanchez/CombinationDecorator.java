@@ -23,6 +23,12 @@ public class CombinationDecorator extends Decorator {
         return this.max;
     }
 
+    @Override
+    public void alterOrder() {
+        decorated.alterOrder();
+        this.max = !this.max;
+    }
+
 
     public void evalHeuristic() {
         this.heuristic = decorated.ieval();
@@ -62,8 +68,6 @@ public class CombinationDecorator extends Decorator {
             evalHeuristic();
         return this.heuristic.isFinished();
     }
-
-
 
 
     @Override
