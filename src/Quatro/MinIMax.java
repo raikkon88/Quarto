@@ -1,18 +1,13 @@
 package Quatro;
 
+
 /**
  * Author : Marc Sànchez Pifarré
  * Udg Code : u1939705
  * Classe Node
  * ------------------------------
- * TODO : Comentar punts crítics.
  */
 public class MinIMax {
-
-
-    public MinIMax(){
-
-    }
 
     private boolean enoughtDeep(int level){
         return level == 0;
@@ -20,24 +15,21 @@ public class MinIMax {
 
 
     public Node minIMax(Node node, int deep){
-        // Node finalValue;
+
         if(enoughtDeep(deep)) {
-            //node.computeHeuristic();
-            return node; // heuristic(node)
+            return node;
         }
 
         if(!node.isLeaf())
             node.generate();
 
         if(node.isEmpty()) {
-            //node.computeHeuristic();
-            return node; // heuristic(node)
+            return node;
         }
         Node best;
-        if(node.isMin()){
-            best = new Node(Integer.MAX_VALUE);
+        if(!node.isMax()){
+            best = new NodeFantasma(Integer.MAX_VALUE);
             for(Node n : node.nodes){
-                //if (alfa.getHeuristic() >= beta.getHeuristic()) break;
                 Node value = minIMax(n, deep - 1);
                 if(value.getHeuristic() < best.getHeuristic()) {
                     best = n;
@@ -46,7 +38,7 @@ public class MinIMax {
             }
         }
         else {
-            best = new Node(Integer.MIN_VALUE);
+            best = new NodeFantasma(Integer.MIN_VALUE);
             for(Node n : node.nodes){
                 Node value = minIMax(n, deep - 1);
                 if( value.getHeuristic() > best.getHeuristic()) {

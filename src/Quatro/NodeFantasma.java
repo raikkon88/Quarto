@@ -1,4 +1,4 @@
-package MarcSanchez;
+package Quatro;
 
 public class NodeFantasma extends Node {
 

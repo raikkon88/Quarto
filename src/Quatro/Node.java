@@ -1,215 +1,65 @@
 package Quatro;
 
+import java.util.HashSet;
+import java.util.Set;
 
-import java.util.*;
+public abstract class Node {
 
-/**
- * Author : Marc Sànchez Pifarré
- * Udg Code : u1939705
- * Classe Node
- * ------------------------------
- */
-public class Node {
+    protected int level;
+    protected Set<Node> nodes;
+    protected Piece piece;
+    protected Position position;
+    protected Set<Piece> toPlay;
+    protected Set<Position> free;
+    protected boolean max;
+    protected int heuristicValue;
 
-    Heuristic heuristic; // Valor de l'heurístic
-    int level; // Nivell al que pertany el node.
-    Combination combination; // La combinació a retornar de posició on pos la peça i la següent a peça a entregar
-    boolean max; // Aquest node és un node maximitzat o minimitzat
-    List<Node> nodes; // Fills
-    List<Piece> toPlay; // Peces que queden per jugar
-    List<Position> free; // Posicions lliures que queden al tauler
-    boolean isFinal; // Aquest node és guanyador
+    public void setPiece(Piece piece){this.piece = piece;}
+    public int getLevel(){ return level;}
+    public boolean isMax(){return max;}
+    public void setHeuristic(int heuristic){ this.heuristicValue= heuristic;}
 
+    public abstract void alterOrder();
 
-    /** Constructor per nodes fantasma que només han de desar el valor de l'heurístic.
-     * SERVEIX DE COMPARADOR
-     * @param heuristic, el valor per defecte que obtindrà aquest node.
-     *                   Només pot ser :
-     *                   - Integer.MAX_VALUE
-     *                   - Integer.MIN_VALUE
-     */
-    public Node(int heuristic){
-        this.heuristic = new Heuristic(heuristic);
-    }
-
-    /**
-     * Constructor bàsic, es construeix un fill a partir d'un pare
-     * @param node Node pare amb el que construïr les propietats bàsiques del fill.
-     */
-    public Node(Node node){
-        this.level = node.level + 1;
-        this.max = !node.max;
-        this.heuristic = new Heuristic(this, node.heuristic);
-        this.toPlay = new ArrayList<>();
-        this.free = new ArrayList<>();
-        this.nodes = new ArrayList<>();
-    }
-
-    /**
-     * Constructor inicial (Serveix per inicialitzar el primer node arrel)
-     * @param level Nivell que tenim jugat de l'arbre
-     * @param piece Peça que ens ha aportat el contrincant
-     */
-    public Node(int level, Piece piece, Tauler meutaulell){
-
-        // Aquest constructor només serà cridat per nivell == 0 o nivell == 1
-        this.level = level;
-        this.max = true;
-        this.heuristic = new Heuristic(0);
-        this.combination = new Combination(piece);
-        // Genero el set de posicions (S'emplena a cada node).
-        this.free = new ArrayList<>();
-        // Genero les peces i de passada trec la que s'ha jugat en aquest moment.
-        this.toPlay = Piece.generateNPieces(16);
-        this.toPlay.remove(piece);
-        // INstancio l'objecte Heurístic que aniré alimentant a mesura que vagi adelantant a l'arbre per saber si és node final o no i per aplicar la poda heurística.
-        //this.heuristic = new Heuristic(this);
-        updateBoard(meutaulell);
-        this.nodes = new ArrayList<>();
-    }
-
-    /**
-     * Constructor per la jugada de l'oponent
-     * - El tauler s'instancia en un altre costat. (cosa que potser estaria bé que el rebés aquí)
-     * @param node Node del que partim per generar l'actual
-     * @param forHim La peça que ens ha entregat l'oponent per situar.
-     */
-    public Node(Node node, Piece forHim, Tauler meutaulell){
-        this(node);
-        this.combination = new Combination(forHim);
-        this.heuristic = new Heuristic(this, node.heuristic);
-
-        for(Piece piece : node.toPlay){
-            this.toPlay.add(new Piece(piece));
-        }
-
-        updateBoard(meutaulell);
-    }
-
-    /**
-     * Constructor que serveix per generar un node fill.
-     * @param node Node pare del que es parteix per la generació.
-     * @param son Combinació del fill que es genera.
-     */
-    public Node(Node node, Combination son) {
-        this(node);
-        this.combination = son;
-
-        this.isFinal = this.heuristic.updateMatrix(this.combination.x(), this.combination.y(), node.combination.getInt());
-
-        // En aquest punt cada node té un heurístic i el que hai de fer és afegir la combinació actual al mateix heurístic i treure les peces i la posició que ocupa.
-        for(Piece p : node.toPlay){
-            if(p.getInt() != node.combination.getInt()) {
-                this.toPlay.add(new Piece(p));
-            }
-        }
-
-        for(Position pos : node.free){
-            if(!(pos.x() == son.x() && pos.y() == son.y())){
-                this.free.add(new Position(pos));
-            }
-        }
-    }
-
-
-    /**
-     * Actualitza les variables, tauler, free i toPlay amb la info del nou tauler.
-     * @param meutaulell Tauler que es reb de la part principal del joc.
-     */
-    private void updateBoard(Tauler meutaulell){
-
-        Set<Piece> tmp = new HashSet<>();
-        for(int f = 0; f < meutaulell.getX(); f++){
-            for(int c = 0; c < meutaulell.getY(); c++){
-                int value = meutaulell.getpos(f, c);
-                if(value == -1){
-                    this.free.add(new Position(f, c));
-                }
-                else{
-                    isFinal = this.heuristic.add(value, f, c) || isFinal;
-                    Piece toGenerate = new Piece(value);
-                    if(toGenerate.getInt() != this.combination.getInt())
-                        tmp.add(toGenerate);
-                }
-            }
-        }
-        this.toPlay.removeAll(tmp);
-    }
-
-    /**
-     * Genera els fills combinant totes les posicions lliures i totes les peces que queden per posar excloent la que li toca posar a la posició escollida
-     */
-    public void generate(){
-        for(Piece piece : toPlay){
-            if(piece.getInt() != this.combination.getInt() || free.size() == 1){
-                for(Position p : free){
-                    nodes.add(new Node(this, new Combination(p, piece)));
-                }
-            }
-        }
-    }
-
-    /**
-     *
-     * @return Retorna una tupla amb la posició i la peça a posar.
-     */
-    public Combination getCombination(){
-        return this.combination;
-    }
-
-    /**
-     * S'utilitza per la poda heurística
-     * @return Si el node és un node guanyador.
-     */
-    public boolean isLeaf(){
-        return isFinal;
-    }
-
-    /**
-     * Aconseguir el valor de l'heurística per aquest node
-     * - Es pot consultar com es calcula l'heurístic a la classe Heurístic.
-     * @return El valor enter per l'heurístic
-     */
-    public int getHeuristic(){
-        return this.heuristic.getValue();
-    }
-
-    /**
-     * S'empra per barrejar les diferents posicions i les diferents peces que quedden al taulell.
-     * Es fa així per evitar patrons d'actuació donades unes possibilitats.
-     */
-    public void shuffle(){
-        Collections.shuffle(this.toPlay);
-        Collections.shuffle(this.free);
-    }
-
-    /**
-     * Que un node sigui min significa que serà maximitzat per el seu pare.
-     * @return Si el node no és un node màxim.
-     */
-    public boolean isMin(){
-        return !max;
-    }
-
-    /**
-     * Un node és empty quan no té fills.
-     * @return Si el nombre de fills == 0
-     */
     public boolean isEmpty(){
-        return this.nodes.isEmpty();
+        return nodes.isEmpty();
     }
 
-    /**
-     * Mètode que s'utilitza per assginar heurístics als nodes pare.
-     * @param value Valor de l'heurísitc a assignar.
-     */
-    public void setHeuristic(int value){
-        this.heuristic = new Heuristic(value);
+    public void setPieces(Set<Piece> piecesToPlay){
+        this.toPlay = piecesToPlay;
     }
+
+    public void setFreePositions(Set<Position> freePositions){
+        this.free = freePositions;
+    }
+
+    public abstract int getHeuristic();
+
+    public abstract boolean isLeaf();
+
+    protected abstract Heuristic ieval();
+
+    public void generate(){
+
+        // Combino les peces amb les posicions.
+        for(Piece p : toPlay){
+            for(Position pos : free){
+                Node n = new CombinationDecorator(this, new Position(pos), new Piece(p));
+                nodes.add(n);
+                HashSet<Position> tmpPos = new HashSet<>(free);
+                HashSet<Piece> tmpPiece  = new HashSet<>(toPlay);
+                tmpPos.remove(pos);
+                tmpPiece.remove(p);
+                n.setFreePositions(tmpPos);
+                n.setPieces(tmpPiece);
+            }
+        }
+    }
+
+    public abstract int[] getResult();
 
     @Override
     public String toString() {
-        return this.combination.toString() + " -> " + this.heuristic;
+        return this.position + " - P > " + this.piece + " - H > " + this.heuristicValue + " - N > " + this.level + " - M > " + this.isMax();
     }
 }
-

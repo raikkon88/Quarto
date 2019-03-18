@@ -1,6 +1,7 @@
 package Quatro;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Author : Marc Sànchez Pifarré
@@ -9,67 +10,59 @@ import java.util.*;
  * ------------------------------
  * TODO : Comentar punts crítics.
  */
-public class Piece {
+public class Piece implements Cloneable{
 
-    protected int [] piece;
+    protected int piece;
 
     public Piece(int [] pieceValues) {
-        piece = pieceValues.clone();
+        piece = pieceValues[0] * 1000+pieceValues[1]*100+ pieceValues[2]*10+pieceValues[3];
     }
 
     public Piece(Piece piece){
-        this.piece = piece.piece.clone();
+        this.piece = piece.piece;
     }
 
     public Piece(int value){
-        piece = new int[4];
-        piece[3] = value % 2; value /= 10;
-        piece[2] = value % 2; value /= 10;
-        piece[1] = value % 2; value /= 10;
-        piece[0] = value % 2;
+        piece = value;
     }
 
     public int getInt(){
-        return fromArrayToInt(piece);
+        return piece;
     }
 
     public Piece(int color, int forma, int forat, int tamany){
-        this.piece = new int[4];
-        this.piece[0] = color;
-        this.piece[1] = forma;
-        this.piece[2] = forat;
-        this.piece[3] = tamany;
+        this(new int[]{color, forma, forat, tamany});
     }
 
-
-    private int fromArrayToInt(int[] array){
-        int value = 0;
-        for(int i = 0; i < array.length; i++){
-            value *= 10;
-            value +=array[i];
-        }
-        return value;
-    }
-
-    public int[] getPropertiesArray(){
-        int[] properties = new int[8];
-        properties[0] = piece[0] == 0 ? 1 : 0;
-        properties[1] = piece[0];
-        properties[2] = piece[1] == 0 ? 1 : 0;
-        properties[3] = piece[1];
-        properties[4] = piece[2] == 0 ? 1 : 0;
-        properties[5] = piece[2];
-        properties[6] = piece[3] == 0 ? 1 : 0;
-        properties[7] = piece[3];
-        return properties;
-    }
 
     public int getProperties(){
-        return fromArrayToInt(getPropertiesArray());
+        int tmp = piece;
+        int tamany = tmp % 2; tmp /= 10;
+        int forat  = tmp % 2; tmp /= 10;
+        int forma  = tmp % 2; tmp /= 10;
+        int color  = tmp % 2;
+        int gran = tamany;
+        int petita = tamany == 0 ? 1 : 0;
+        int foradada = forat;
+        int noForadada = forat == 0 ? 1 : 0;
+        int quadrada = forma;
+        int rodona = forma == 0 ? 1 : 0;
+        int negre = color;
+        int blanca = color == 0 ? 1 : 0;
+        return  blanca * 10000000 +
+                negre * 1000000 +
+                rodona * 100000 +
+                quadrada * 10000 +
+                noForadada * 1000 +
+                foradada * 100 +
+                petita * 10 +
+                gran;
     }
 
-    public static List<Piece> generateNPieces(int n){
-        List<Piece> pieces = new ArrayList<>();
+
+
+    public static Set<Piece> generateNPieces(int n){
+        Set<Piece> pieces = new HashSet<>();
         for(int i = 0; i < n; i++){
             String value = Integer.toBinaryString(i);
             pieces.add(new Piece(Integer.valueOf(value)));
@@ -88,8 +81,13 @@ public class Piece {
         if(obj == null) return this == null;
         else if(!(obj instanceof Piece)) return false;
         else  {
-            return ((Piece) obj).getInt() == getInt();
+            return ((Piece) obj).piece == piece;
         }
+    }
+
+    @Override
+    protected Object clone() {
+        return new Piece(piece);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package MarcSanchez;
+package Quatro;
 
 public abstract class Decorator extends Node {
 

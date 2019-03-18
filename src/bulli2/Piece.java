@@ -12,6 +12,7 @@ public class Piece {
                                     {0,1,0,0},{0,1,0,1},{0,1,1,0},{0,1,1,1},
                                     {1,0,0,0},{1,0,0,1},{1,0,1,0},{1,0,1,1},
                                     {1,1,0,0},{1,1,0,1},{1,1,1,0},{1,1,1,1}};
+    public final static int[] LAST={2,0,0,0};
     
     private int _value;
     //per obtenir les propietats de la peça es fara servir com a index de VALUES
@@ -29,7 +30,9 @@ public class Piece {
        
         if(_value>-1 && _value <LIMIT)
             return VALUES[_value];
-        else 
+        else if(_value ==16)
+            return LAST;
+        else
             return null;
     }
     

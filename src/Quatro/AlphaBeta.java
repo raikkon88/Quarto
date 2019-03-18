@@ -1,6 +1,8 @@
 package Quatro;
 
 
+
+
 /**
  * Author : Marc Sànchez Pifarré
  * Udg Code : u1939705
@@ -52,7 +54,7 @@ public class AlphaBeta {
             return node;
         }
 
-        if(node.isMin()){
+        if(!node.isMax()){
             for(Node n : node.nodes){
                 if (alfa.getHeuristic() >= beta.getHeuristic()) break;
                 Node value = alphaBeta(n, deep - 1, alfa, beta);
@@ -68,8 +70,10 @@ public class AlphaBeta {
             for(Node n : node.nodes){
                 if (alfa.getHeuristic() >= beta.getHeuristic()) break;
                 Node value = alphaBeta(n, deep - 1, alfa, beta);
-                if( value.getHeuristic() > alfa.getHeuristic()) alfa = n; n.setHeuristic(value.getHeuristic());
-
+                if( value.getHeuristic() > alfa.getHeuristic()) {
+                    alfa = n;
+                    n.setHeuristic(value.getHeuristic());
+                }
             }
             return alfa;
         }

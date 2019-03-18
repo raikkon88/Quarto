@@ -1,8 +1,5 @@
 package Quatro;
 
-import java.util.*;
-import java.util.concurrent.LinkedBlockingQueue;
-
 /**
  * Author : Marc Sànchez Pifarré
  * Udg Code : u1939705
@@ -10,32 +7,16 @@ import java.util.concurrent.LinkedBlockingQueue;
  * ------------------------------
  * TODO : Aplicar un patró template.
  */
-public class Player {
+public abstract class Player {
 
     protected Tauler meutaulell;
     protected Node tree;
     // S'utilitza per tenir un control de l'última peça que ha posat el contrincant (la deso perquè li he donat jo).
-    protected int ultimaJugada;
 
     public Player(Tauler entrada){
         meutaulell = entrada;
     }
 
-    protected int calculateStep(int level){
-        if(level >= 0 || level <= 2){
-            return 3;
-        }
-        else if(level > 2 && level < 6){
-            return 3;
-        }
-        else if(level > 5 && level < 10){
-            return 4;
-        }
-        else if(level == 10){
-            return 5;
-        }
+    protected abstract int calculateStep(int level);
 
-        return 6;
-
-    }
 }

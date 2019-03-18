@@ -12,129 +12,104 @@ public class Heuristic {
     private static final int HEU_ROWS = 10;
     public static final int HEURISTIC_MAX = 100000;
 
-    int heuristic;
-    boolean finished;
     HeuristicRow[] matrix;
-    Node node;
+    int value;
+    boolean finished;
+    Piece nextPiece;
+    boolean calculated;
 
-    public Heuristic(Node node, Heuristic h){
-        this.node = node;
+    public Heuristic(Piece value){
+        this.value = 0;
+        this.nextPiece = new Piece(value);
         this.matrix = new HeuristicRow[HEU_ROWS];
+        this.finished = false;
+        this.calculated = false;
         for(int i = 0; i < HEU_ROWS; i++){
-            HeuristicRow row = h.matrix[i];
-            matrix[i] = new HeuristicRow(row);
-            this.heuristic += row.finalPoints;
+            matrix[i] = new HeuristicRow();
         }
-        if(this.finished){
-            this.heuristic = HEURISTIC_MAX * (16 - node.level);
-        }
-        if (node.max) {
-            this.heuristic *= -1;
-        }
-    }
-
-    public Heuristic(int value){
-        this.heuristic = value;
-        this.matrix = new HeuristicRow[HEU_ROWS];
-        for(int i = 0; i < HEU_ROWS; i++){
-            matrix[i] = new HeuristicRow(i);
-        }
-
     }
 
     public int getValue(){
-        return heuristic;
+        if(!calculated){
+            for(int i = 0; i < Heuristic.HEU_ROWS; i++){
+                value +=  matrix[i].finalPoints;
+            }
+            calculated = true;
+            return value;
+        }
+        return value;
     }
 
-    public boolean add(int value, int f, int c){
-        return updateMatrix(f, c, value);
+    public Piece getPiece(){
+        return this.nextPiece;
     }
 
 
-    public boolean updateMatrix(int row, int col, int piece){
-        Piece p = new Piece(piece);
-        finished = matrix[row].addValue(p.getProperties()) || finished;
-        finished = matrix[4+col].addValue(p.getProperties())|| finished;
-        if(row == col) finished = matrix[8].addValue(p.getProperties()) || finished;
-        if(row == 3-col) finished = matrix[9].addValue(p.getProperties()) || finished;
+    public void add(int row, int col, Piece piece, boolean isMax){
+        finished = matrix[row].addValue(piece.getProperties(), isMax) || finished;
+        finished = matrix[4+col].addValue(piece.getProperties(), isMax) || finished;
+        if(row == col) finished = matrix[8].addValue(piece.getProperties(), isMax) || finished;
+        if(row == 3-col) finished = matrix[9].addValue(piece.getProperties(), isMax) || finished;
+    }
+
+    public boolean isFinished(){
         return finished;
     }
 
     @Override
     public String toString() {
-        return this.heuristic + "  |  " + (this.finished ? "Final" : "No Final");
+        return getValue() + "  |  " + (isFinished() ? "Final" : "No Final");
     }
 
     // giving a value for each kind of number that can give.
-    // If is a 0 -> 1 points.
-    // If is a 1 -> 10 points
-    // If is a 2 -> 100 points
-    // If is a 3 -> 1000 points
+    // If is a 0 -> 2 points.
+    // If is a 1 -> 3 points
+    // If is a 2 -> 5 points
+    // If is a 4 -> 8 points
+    // If is a 3 -> 0 points
     public class HeuristicRow {
 
-        int rowName;
         int value;
         int finalPoints;
-        int piecesNumber;
 
-        int zeros;
         int ones;
         int twos;
-        int threes;
+        int zeros;
         int fours;
 
 
-        public HeuristicRow(int rowValue){
-            this.rowName = rowValue;
+        public HeuristicRow(){
             value = 0;
-            zeros = 0;
             ones = 0;
             twos = 0;
-            threes = 0;
+            zeros = 0;
             fours = 0;
-            piecesNumber = 0;
             finalPoints = 0;
         }
 
-        public HeuristicRow(HeuristicRow row){
-            this.rowName = row.rowName;
-            this.value = row.value;
-            this.zeros = row.zeros;
-            this.ones = row.ones;
-            this.twos = row.twos;
-            this.threes = row.threes;
-            this.fours = row.fours;
-            this.piecesNumber = row.piecesNumber;
-            this.finalPoints = row.finalPoints;
-        }
-
-        public boolean addValue(int properties){
+        public boolean addValue(int properties, boolean isMax){
             this.value += properties;
             int copy = value;
             while (copy > 0){
                 int partial = copy % 5;
-                if(partial == 0){
-                    zeros++;
-                    finalPoints+=1;
-                }
-                else if(partial == 1){
+                if(partial == 1){
                     ones++;
-                    finalPoints += 10;
                 }
                 else if(partial == 2){
                     twos++;
-                    finalPoints += 100;
                 }
-                else if(partial == 3){
-                    threes++;
-                    finalPoints += 1000;
+                else if(partial == 0){
+                    zeros++;
                 }
-                else{
+                else if (partial == 4){
                     fours++;
+                }
+                else {
+                    // Nothing to do, we don't want to evaluate the 3's.
                 }
                 copy /= 10;
             }
-            piecesNumber++;
+            finalPoints = zeros * 1 + ones * 1 + (4 * fours) + (3 * twos);
             return isFinal();
         }
 
@@ -145,10 +120,8 @@ public class Heuristic {
 
         @Override
         public String toString() {
-            if(rowName < 4) return "Fila : " + rowName + " -> " + value;
-            else if(rowName < 8) return "Columna : " + (rowName - 4) + " -> " + value;
-            else if(rowName == 8) return "Diagonal 1 " + " -> " + value;
-            else return "Diagonal 2" + " -> " + value;
+            return  "VALUE = " + value + " | 0s = " + zeros + " | 1s = " + ones + " | 2s = " + twos +
+                    " | 4s = " + fours + " -----> (" + finalPoints + ")";
         }
     }
 }

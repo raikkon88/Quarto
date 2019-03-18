@@ -1,78 +1,113 @@
 package Quatro;
 
 
-/**
- * Author : Marc Sànchez Pifarré
- * Udg Code : u1939705
- * Classe Player1
- * ------------------------------
- * TODO : Heretar el patró template.
- */
-public class Player1 extends Player{
 
-    public Player1(Tauler entrada){
+import java.util.Iterator;
+import java.util.Set;
+
+public class Player1 extends Player {
+
+
+    protected Node tree;
+
+    public Player1(Tauler entrada) {
         super(entrada);
-        System.out.println("------------------------");
-        System.out.println("NEW GAME");
-        System.out.println("------------------------");
-    }
-
-    int lastHeuristic;
-
-    public int[] tirada(int colorin, int formain, int foratin, int tamanyin) {
-        //colorin - Color de la peça a colocar  -> 	0 = Blanc 	1 = Negre
-        //formain - Forma de la peça a colocar  -> 	0 = Rodona 	1 = Quadrat
-        //foratin - Forat de la peça a colocar  -> 	0 = No  	1 = Si
-        //tamanyin - Forat de la peça a colocar ->  0 = Petit 	1 = Gran
-
-        // És el primer cop que tiro.
-        if(isMyFirstStep()) {
-            tree = new Node(0, new Piece(colorin, formain, foratin, tamanyin), meutaulell);
-        }
-        // Rebo la tirada de l'altre.
-        else{
-            tree = new Node(tree, new Piece(colorin, formain, foratin, tamanyin), meutaulell);
-        }
-        // Desordeno les peces i les posicions.
-        tree.shuffle();
-
-        // Fem el càlcul de l'algoritme
-        tree = new AlphaBeta().alphaBeta(tree, calculateStep(tree.level), new Node(Integer.MIN_VALUE), new Node(Integer.MAX_VALUE));
-        System.out.println("Heurístic step " + tree.level + " : " + tree.getHeuristic() + " -> " + tree);
-        lastHeuristic = tree.getHeuristic();
-        ultimaJugada = tree.getCombination().getInt();
-
-        if(tree.level > 14){
-            // Hem de retornar una peça que no existeixi al final de la partida per què el tauler no peti.
-            return new int[]{tree.getCombination().x(), tree.getCombination().y(), 1, 1 ,1 ,2};
-        }
-        else{
-            return tree.getCombination().toIntArray();
-        }
-    }
-
-
-    private boolean isMyFirstStep(){
-        return tree == null;
     }
 
     @Override
     protected int calculateStep(int level) {
-        if(level < 3)
-            return 3;
-        else if(level < 5){
+        if(level >= 0 && level < 2){
+            return 2;
+        }
+        else if(level >= 2 && level < 4){
             return 3;
         }
-        else if(level < 7){
+        else if(level >= 4  && level < 6){
+            return 3;
+        }
+        else if(level >= 6 && level < 8){
             return 4;
         }
-        else if(level < 9){
-            return 6;
-        }
-        else{
-            return 7;
+        else {
+            return 10;
         }
     }
 
-}
 
+    public int[] tirada(int colorin, int formain, int foratin, int tamanyin) {
+
+        Set<Piece> toPlay = Piece.generateNPieces(16);
+        Set<Position> free = Position.generateNPositions(4, 4);
+
+        Piece in = new Piece(colorin, formain, foratin, tamanyin);
+        toPlay.remove(in);
+
+        Position p = null;
+        boolean first = true;
+        for(int i = 0; i < 4; i++){
+            for(int j = 0; j < 4; j++){
+                int value = meutaulell.getpos(i, j);
+                if(value != -1){
+                    free.remove(new Position(i, j));
+                    if(first) {
+                        this.tree = new TaulerInicial(new Piece(value));
+                        first = false;
+                    }
+                    else{
+                        tree = new CombinationDecorator(tree, new Position(p), new Piece(value));
+                    }
+                    toPlay.remove(new Piece(value));
+                    p = new Position(i,j);
+                }
+            }
+        }
+        if(tree == null){
+            tree = new TaulerInicial(in);
+        }
+        else{
+            tree = new CombinationDecorator(tree, p, in);
+        }
+        tree.setPieces(toPlay);
+        tree.setFreePositions(free);
+
+        int levelToGo = 0;
+        // Comprovem si estic com a player 1 o com a player 2.
+        if(free.size() % 2 == 1){ // Nombre imparell de peces al tauler estic com a player 2
+            // S'ha de girar el max / min dels nodes de l'arbre.
+            tree.alterOrder();
+            levelToGo = calculateStep(tree.getLevel());
+        }
+        else {
+            levelToGo = calculateStep(tree.getLevel());
+        }
+
+        if(toPlay.size() == 0){
+            if(free.size() > 1){
+                System.out.println("it can't be possible... ");
+            }
+            else{
+                Iterator<Position> position = free.iterator();
+                Position lastPosition = position.next();
+                return new int[]{lastPosition.x(), lastPosition.y(), 2,2,2,2};
+            }
+        }
+        else{
+            tree = new AlphaBeta().alphaBeta(tree, levelToGo, new NodeFantasma(Integer.MIN_VALUE), new NodeFantasma(Integer.MAX_VALUE));
+        }
+
+        System.out.println("-----------------------------------------------");
+        System.out.println("MARC -> " + tree);
+        System.out.println("Heurístic : " + tree.getHeuristic());
+        System.out.println("Posició : " + tree.getResult()[0] + " , " + tree.getResult()[1]);
+        System.out.println("Peça que entrego : " + tree.piece);
+        System.out.println("-----------------------------------------------");
+
+        return tree.getResult();
+    }
+
+
+
+
+
+
+}

@@ -1,11 +1,22 @@
-package MarcSanchez;
+package Quatro;
 
 
 import java.util.HashSet;
 
+/**
+ * Author : Marc Sànchez Pifarré
+ * Udg Code : u1939705
+ * Classe CombinationDecorator
+ * ------------------------------
+ * // TODO : Aplicar patró strategy
+ * S'empra per executar l'algoritme Alpha Beta sobre un node en concret.
+ */
 public class CombinationDecorator extends Decorator {
 
 
+    /**
+     * objecte que s'utilitza per el
+     */
     protected Heuristic heuristic;
 
     public CombinationDecorator(Node node, Position pos, Piece piece){

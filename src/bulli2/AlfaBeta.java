@@ -5,10 +5,8 @@
  */
 package bulli2;
 
-import bulli2.Node;
 
 import java.util.Iterator;
-
 
 /**
  *
@@ -27,8 +25,9 @@ public class AlfaBeta {
     }
     
     private int eval(Node actual, int actualDepth, int depthToReach, int firstDepth, int alpha, int beta){
-         if (actualDepth == depthToReach) 
+        if (actualDepth == depthToReach) 
             return actual.heuristic();
+        
         
         actual.generateChild();
         if (!actual.hasChild())
@@ -65,8 +64,8 @@ public class AlfaBeta {
        
     }
     
-    public void eval(Node actual, int actualDepth, int depthToReach){
-        eval(actual,actualDepth,depthToReach,actualDepth,Integer.MIN_VALUE,Integer.MAX_VALUE);
+    public int eval(Node actual, int actualDepth, int depthToReach){
+        return eval(actual,actualDepth,depthToReach,actualDepth,Integer.MIN_VALUE,Integer.MAX_VALUE);
         
     }
     
