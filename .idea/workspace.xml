@@ -2,55 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5384845-3a8c-45e6-aeaa-80bd8c5cc899" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ia-quarto.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quatro/Decorator/Decorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quatro/Decorator/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quatro/Players/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quatro/Players/Player2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quatro/Utilities/Heuristic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quatro/Utilities/Piece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/AlphaBeta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/CombinationDecorator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Decorator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Heuristic$HeuristicRow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Heuristic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/NodeFantasma.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Piece.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Player1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Player2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Position.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/TaulerInicial.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/AlphaBeta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/AlphaBeta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Combination.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic$HeuristicRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic$HeuristicRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/MinIMax.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/MinIMax.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Piece.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Position.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gil/Gil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gil/Tria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bulli/AlfaBeta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bulli/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bulli/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bulli/Piece.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bulli/Player1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/AlphaBeta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/CombinationDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Decorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic$HeuristicRow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/MinIMax.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/NodeFantasma.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Position.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Tauler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Tauler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/AlphaBeta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/CombinationDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Decorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Decorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Heuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Heuristic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/NodeFantasma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Player1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Player1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Player2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Player2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/TaulerInicial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quatro/AlphaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/AlphaBeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quatro/Combination.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quatro/MinIMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/MinIMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quatro/Player3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/TaulerInicial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/bulli2/AlfaBeta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/bulli2/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/bulli2/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/bulli2/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/bulli2/Player1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/gil/Gil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/gil/Tria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/roger/AlphaBetaAgent$TripePiece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/roger/AlphaBetaAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/roger/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/roger/Player1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/roger/Resultat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/roger/TaulerExtended.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/AlphaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Algorithms/AlphaBeta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/CombinationDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Decorator/CombinationDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Decorator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Heuristic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/MinIMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Algorithms/MinIMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/NodeFantasma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Decorator/NodeFantasma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Piece.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Player1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Players/Player1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Player2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Utilities/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Quatro/Tauler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Tauler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bulli2/AlfaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bulli2/AlfaBeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bulli2/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bulli2/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bulli2/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bulli2/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bulli2/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bulli2/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bulli2/Player1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bulli2/Player1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/TaulerInicial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Decorator/TaulerInicial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bulli2/AlfaBeta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bulli2/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bulli2/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bulli2/Piece.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bulli2/Player1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gil/Gil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gil/Tria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roger/AlphaBetaAgent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roger/Piece.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roger/Player1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roger/Resultat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roger/TaulerExtended.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,108 +102,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Players/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Players/Player1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Players/Player2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Utilities/Piece.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Utilities/Heuristic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+            <state relative-caret-position="930">
+              <caret line="170" column="29" selection-start-line="170" selection-start-column="29" selection-end-line="170" selection-end-column="29" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1938#1939#0" expanded="true" />
+                <element signature="e#1975#1976#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bulli2/AlfaBeta.java">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Utilities/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="182">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bulli2/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="540">
+                <caret line="36" selection-start-line="36" selection-end-line="36" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bulli2/Node.java">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Decorator/NodeFantasma.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="36">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Decorator/TaulerInicial.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-24">
               <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bulli2/Piece.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bulli2/Player1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/MinIMax.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/CombinationDecorator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-              <folding>
-                <element signature="e#767#768#0" expanded="true" />
-                <element signature="e#798#799#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/Decorator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/NodeFantasma.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -238,26 +244,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Quatro/Utils.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Player2.java" />
-        <option value="$PROJECT_DIR$/src/Gil.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Gil.java" />
-        <option value="$PROJECT_DIR$/src/Gil/Gil.java" />
-        <option value="$PROJECT_DIR$/src/bulli/Node.java" />
-        <option value="$PROJECT_DIR$/src/bulli/AlfaBeta.java" />
-        <option value="$PROJECT_DIR$/src/bulli/Board.java" />
-        <option value="$PROJECT_DIR$/src/bulli/Piece.java" />
-        <option value="$PROJECT_DIR$/src/bulli/Player1.java" />
         <option value="$PROJECT_DIR$/src/Quatro/PieceAndPos.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Player3.java" />
         <option value="$PROJECT_DIR$/src/gil/Player1.java" />
         <option value="$PROJECT_DIR$/src/gil/Gil.java" />
         <option value="$PROJECT_DIR$/src/gil/Tria.java" />
         <option value="$PROJECT_DIR$/src/Quatro/UI.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/AlphaBeta.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Player.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Position.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Piece.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Combination.java" />
         <option value="$PROJECT_DIR$/src/roger/Resultat.java" />
         <option value="$PROJECT_DIR$/src/roger/AlphaBetaAgent.java" />
@@ -266,7 +258,6 @@
         <option value="$PROJECT_DIR$/src/MarcSanchez/TaulerComponent.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Tauler.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Decorator.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Node.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Position.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Piece.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/AlphaBeta.java" />
@@ -277,17 +268,33 @@
         <option value="$PROJECT_DIR$/src/MarcSanchez/Player.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Player1.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Player2.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Heuristic.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Heuristic.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/MinIMax.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/MinIMax.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/CombinationDecorator.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Player1.java" />
         <option value="$PROJECT_DIR$/src/bulli2/AlfaBeta.java" />
         <option value="$PROJECT_DIR$/src/bulli2/Board.java" />
         <option value="$PROJECT_DIR$/src/bulli2/Node.java" />
         <option value="$PROJECT_DIR$/src/bulli2/Player1.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/AlphaBeta.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/MinIMax.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Decorator.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Node.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Heuristic.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/CombinationDecorator.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/NodeFantasma.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Piece.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Player.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Player1.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Position.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Player2.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/TaulerInicial.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Tauler.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Algorithms/MinIMax.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Solution/Node.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Algorithms/AlphaBeta.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Decorator/CombinationDecorator.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Solution/Heuristic.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/Quatro/Utilities/Heuristic.java" />
       </list>
     </option>
   </component>
@@ -297,53 +304,54 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-25" />
-    <option name="y" value="27" />
-    <option name="width" value="1833" />
-    <option name="height" value="879" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="463" />
+    <option name="y" value="157" />
+    <option name="width" value="1412" />
+    <option name="height" value="986" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="Quarto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Quarto" type="462c0819:PsiDirectoryNode" />
+              <item name="Quarto" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Quarto" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
             <path>
-              <item name="Quarto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Quarto" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Quarto" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Quarto" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="Quarto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Quarto" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bulli2" type="462c0819:PsiDirectoryNode" />
+              <item name="Quarto" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Quarto" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Quatro" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="Quarto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Quarto" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Quatro" type="462c0819:PsiDirectoryNode" />
+              <item name="Quarto" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Quarto" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Quatro" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Utilities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552918256714" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552946111619" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -355,6 +363,7 @@
       <recent name="MarcSanchez" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/bulli2" />
       <recent name="$PROJECT_DIR$/src/roger" />
       <recent name="$PROJECT_DIR$/src/Quatro" />
@@ -402,11 +411,12 @@
       <workItem from="1552467584205" duration="7667000" />
       <workItem from="1552649719568" duration="726000" />
       <workItem from="1552773423040" duration="1623000" />
+      <workItem from="1552936276265" duration="9533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220444000" />
+    <option name="totallyTimeSpent" value="229977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -418,10 +428,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1175" extended-state="6" />
+    <frame x="0" y="161" width="1920" height="1082" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29773104" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29028815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -430,7 +440,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3298279" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.3546845" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.3441763" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997233" weight="0.3957935" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -599,13 +609,6 @@
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/List.class" />
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Player2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/ImageRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -613,189 +616,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roger/Piece.java" />
     <entry file="file://$PROJECT_DIR$/src/roger/TaulerExtended.java" />
     <entry file="file://$PROJECT_DIR$/src/roger/Resultat.java" />
-    <entry file="file://$PROJECT_DIR$/src/Quatro/AlphaBeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Combination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Combination.java" />
     <entry file="file://$PROJECT_DIR$/src/roger/Player1.java" />
     <entry file="file://$PROJECT_DIR$/src/roger/AlphaBetaAgent.java" />
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Player3.java" />
+    <entry file="file://$PROJECT_DIR$/src/bulli2/AlfaBeta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Position.java" />
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Player3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="91" column="17" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="88" column="7" lean-forward="true" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Player1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/TaulerInicial.java" />
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Player2.java" />
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Heuristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="96" column="9" lean-forward="true" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Decorator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Heuristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/MinIMax.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/NodeFantasma.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/AlphaBeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="12" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/CombinationDecorator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding>
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Player1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bulli2/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bulli2/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bulli2/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="210">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bulli2/AlfaBeta.java">
+    <entry file="file://$PROJECT_DIR$/src/bulli2/Piece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bulli2/Player1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bulli2/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -804,10 +669,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+        <state relative-caret-position="210">
+          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Algorithms/MinIMax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Algorithms/AlphaBeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Decorator/CombinationDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Decorator/Decorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Decorator/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-718">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding>
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Decorator/NodeFantasma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Decorator/TaulerInicial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Utilities/Piece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Utilities/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="540">
+            <caret line="36" selection-start-line="36" selection-end-line="36" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Players/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia-quarto.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Players/Player1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Players/Player2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Utilities/Heuristic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="170" column="29" selection-start-line="170" selection-start-column="29" selection-end-line="170" selection-end-column="29" />
+          <folding>
+            <element signature="e#1938#1939#0" expanded="true" />
+            <element signature="e#1975#1976#0" expanded="true" />
           </folding>
         </state>
       </provider>
