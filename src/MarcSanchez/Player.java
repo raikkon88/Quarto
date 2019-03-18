@@ -22,19 +22,19 @@ public class Player {
 
     protected int calculateStep(int level){
         if(level >= 0 && level < 2){
-            return 1;
-        }
-        else if(level >= 2 && level < 4){
             return 2;
         }
-        else if(level >= 4  && level < 8){
+        else if(level >= 2 && level < 4){
+            return 3;
+        }
+        else if(level >= 4  && level < 6){
             return 4;
         }
-        else if(level >= 8 && level < 10){
-            return 16;
+        else if(level >= 6 && level < 8){
+            return 5;
         }
-        else
+        else {
             return 8;
-
+        }
     }
 }

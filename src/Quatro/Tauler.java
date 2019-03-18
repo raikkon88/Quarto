@@ -24,7 +24,7 @@ public class Tauler {
     private int jugador;
     private MarcSanchez.Player1 jugador2;
     private long p1time;
-    private gil.Gil jugador1;
+    private roger.Player1 jugador1;
     private long p2time;
 
 
@@ -42,7 +42,7 @@ public class Tauler {
             }
         }
         jugador2 = new MarcSanchez.Player1(this);
-        jugador1 = new gil.Gil(this);
+        jugador1 = new roger.Player1(this);
         
         this.peça =  new int[4];
         this.peça[0] =(int) java.lang.Math.round( java.lang.Math.random() );
