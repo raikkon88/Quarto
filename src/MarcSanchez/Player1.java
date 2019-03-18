@@ -4,7 +4,6 @@ package MarcSanchez;
 
 import Quatro.Tauler;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class Player1 extends Player {
@@ -56,11 +55,13 @@ public class Player1 extends Player {
 
         tree = new AlphaBeta().alphaBeta(tree, calculateStep(tree.getLevel()), new NodeFantasma(Integer.MIN_VALUE), new NodeFantasma(Integer.MAX_VALUE));
 
-        System.out.println("----------------------");
+        System.out.println("-----------------------------------------------");
         System.out.println("MARC -> " + tree);
-        System.out.println("Heurístic : " + tree.heuristic);
+        System.out.println("Heurístic : " + tree.getHeuristic());
         System.out.println("Posició : " + tree.getResult()[0] + " , " + tree.getResult()[1]);
         System.out.println("Peça que entrego : " + tree.piece);
+        System.out.println("-----------------------------------------------");
+
         return tree.getResult();
     }
 

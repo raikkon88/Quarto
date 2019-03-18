@@ -5,11 +5,15 @@ import java.util.HashSet;
 
 public class CombinationDecorator extends Decorator {
 
+
+    protected Heuristic heuristic;
+
     public CombinationDecorator(Node node, Position pos, Piece piece){
         this.decorated = node;
         this.position = new Position(pos);
-        this.piece = piece;
+        this.piece = new Piece(piece);
         this.level = node.level + 1;
+        this.heuristic = null;
         this.nodes = new HashSet<>();
         this.max = !node.max;
     }
@@ -19,32 +23,11 @@ public class CombinationDecorator extends Decorator {
         return this.max;
     }
 
-    @Override
-    public Heuristic evalHeuristic() {
 
-        if(heuristic == null){
-            this.heuristic = decorated.ieval();
-            heuristic.add(this.position.x(), this.position.y(), heuristic.getPiece(), this.max);
-            heuristic.nextPiece = new Piece(this.piece);
-            // TODO : Els heurísitcs es calculen malament. EL valor de les propietats de la peca crec que està malament.
-        }
-        return heuristic;
-
-    }
-
-    @Override
-    public int getHeuristic() {
-        if(this.heuristic == null){
-            evalHeuristic();
-        }
-        return this.heuristic.getValue(this.level, this.max);
-    }
-
-    @Override
-    public boolean isLeaf() {
-        if(this.heuristic == null)
-            evalHeuristic();
-        return this.heuristic.finished;
+    public void evalHeuristic() {
+        this.heuristic = decorated.ieval();
+        heuristic.add(this.position.x(), this.position.y(), heuristic.getPiece(), this.max);
+        heuristic.nextPiece = new Piece(this.piece);
     }
 
     @Override
@@ -54,6 +37,33 @@ public class CombinationDecorator extends Decorator {
         h.nextPiece = new Piece(this.piece);
         return h;
     }
+
+    @Override
+    public int getHeuristic() {
+        if(this.heuristic == null){
+            evalHeuristic();
+        }
+        if(this.heuristicValue == 0) {
+            if (this.heuristic.isFinished()) {
+                this.heuristicValue = Heuristic.HEURISTIC_MAX * (16 - level);
+            } else {
+                this.heuristicValue = this.heuristic.getValue();
+            }
+            if (this.max) {
+                this.heuristicValue *= -1;
+            }
+        }
+        return this.heuristicValue;
+    }
+
+    @Override
+    public boolean isLeaf() {
+        if(this.heuristic == null)
+            evalHeuristic();
+        return this.heuristic.isFinished();
+    }
+
+
 
 
     @Override

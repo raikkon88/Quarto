@@ -3,17 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="a5384845-3a8c-45e6-aeaa-80bd8c5cc899" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/AlphaBeta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/AlphaBeta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic$HeuristicRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic$HeuristicRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Heuristic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/AlphaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/AlphaBeta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/CombinationDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/CombinationDecorator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Heuristic$HeuristicRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Heuristic$HeuristicRow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Heuristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Heuristic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/NodeFantasma.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/NodeFantasma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Piece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Player1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Player1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/Position.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/TaulerInicial.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/MarcSanchez/TaulerInicial.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quarto/Quatro/Player1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Heuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Heuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Piece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Player1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Player1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Player1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Player1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quatro/Tauler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quatro/Tauler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,10 +34,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Quarto$Run.ic" NAME="Run Coverage Results" MODIFIED="1552235406921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Quarto$Run.ic" NAME="Run Coverage Results" MODIFIED="1552903660660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="255" />
+    <option name="myElementSize" value="276" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -45,49 +56,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Player1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+            <state relative-caret-position="327">
+              <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Position.java">
+        <entry file="file://$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="47" column="27" lean-forward="true" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-              <folding>
-                <element signature="e#470#471#0" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#539#540#0" expanded="true" />
-                <element signature="e#952#953#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="205">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Player1.java">
+        <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="27" column="99" selection-start-line="27" selection-start-column="99" selection-end-line="27" selection-end-column="99" />
+            <state relative-caret-position="210">
+              <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#197#198#0" expanded="true" />
-                <element signature="e#227#228#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MarcSanchez/AlphaBeta.java">
+        <entry file="file://$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+            <state relative-caret-position="240">
+              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding>
+                <element signature="e#132#133#0" expanded="true" />
+                <element signature="e#174#175#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,12 +101,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="375">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
-                <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
+                <element signature="e#500#501#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#630#631#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Player1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="59" column="65" lean-forward="true" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="570">
+              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding>
                 <element signature="e#447#448#0" expanded="true" />
                 <element signature="e#483#484#0" expanded="true" />
@@ -120,23 +138,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Piece.java">
+        <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="133">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
-                <element signature="e#503#504#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#586#587#0" expanded="true" />
-                <element signature="e#650#651#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-                <element signature="e#1805#1806#0" expanded="true" />
-                <element signature="e#1852#1853#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MarcSanchez/AlphaBeta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -144,57 +163,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Heuristic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="125" column="70" lean-forward="true" selection-start-line="125" selection-start-column="70" selection-end-line="125" selection-end-column="70" />
+            <state relative-caret-position="193">
+              <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
               <folding>
-                <element signature="e#1109#1110#0" expanded="true" />
-                <element signature="e#1146#1147#0" expanded="true" />
-                <element signature="e#1717#1718#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#694#695#0" expanded="true" />
-                <element signature="e#732#733#0" expanded="true" />
-                <element signature="e#785#786#0" expanded="true" />
-                <element signature="e#827#828#0" expanded="true" />
-                <element signature="e#891#892#0" expanded="true" />
-                <element signature="e#932#933#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quatro/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
-              <folding>
-                <element signature="e#1012#1013#0" expanded="true" />
-                <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#5623#5624#0" expanded="true" />
-                <element signature="e#5662#5663#0" expanded="true" />
-                <element signature="e#5797#5798#0" expanded="true" />
-                <element signature="e#5827#5828#0" expanded="true" />
-                <element signature="e#6056#6057#0" expanded="true" />
-                <element signature="e#6104#6105#0" expanded="true" />
-                <element signature="e#6578#6579#0" expanded="true" />
-                <element signature="e#6605#6606#0" expanded="true" />
-                <element signature="e#6736#6737#0" expanded="true" />
-                <element signature="e#6779#6780#0" expanded="true" />
-                <element signature="e#6959#6960#0" expanded="true" />
-                <element signature="e#7012#7013#0" expanded="true" />
-                <element signature="e#7058#7059#0" expanded="true" />
-                <element signature="e#7134#7135#0" expanded="true" />
+                <element signature="e#1647#1648#0" expanded="true" />
+                <element signature="e#1678#1679#0" expanded="true" />
+                <element signature="e#1724#1725#0" expanded="true" />
+                <element signature="e#1811#1812#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -234,6 +209,8 @@
       <find>updateMatrix</find>
       <find>Quatro.Piece</find>
       <find>Quatro.</find>
+      <find>heuristic =</find>
+      <find>isLea</find>
     </findStrings>
     <replaceStrings>
       <replace>Piece</replace>
@@ -276,22 +253,22 @@
         <option value="$PROJECT_DIR$/src/roger/TaulerExtended.java" />
         <option value="$PROJECT_DIR$/src/roger/Player1.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/TaulerComponent.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Player1.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Tauler.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Decorator.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Heuristic.java" />
         <option value="$PROJECT_DIR$/src/Quatro/Node.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/Node.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java" />
-        <option value="$PROJECT_DIR$/src/Quatro/Tauler.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/AlphaBeta.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/Player.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/Piece.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java" />
-        <option value="$PROJECT_DIR$/src/MarcSanchez/Heuristic.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Position.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/Piece.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/AlphaBeta.java" />
         <option value="$PROJECT_DIR$/src/MarcSanchez/Player1.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/Node.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Player1.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/Heuristic.java" />
+        <option value="$PROJECT_DIR$/src/MarcSanchez/Player.java" />
+        <option value="$PROJECT_DIR$/src/Quatro/Tauler.java" />
       </list>
     </option>
   </component>
@@ -348,12 +325,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Quatro" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Quarto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Quarto" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="roger" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -365,7 +336,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552778576650" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552908167350" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -428,7 +399,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206091000" />
+    <option name="totallyTimeSpent" value="212559000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -440,9 +411,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1987" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1175" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29441062" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29441062" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -451,8 +423,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.35529158" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997233" weight="0.3963283" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.3546845" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997233" weight="0.3957935" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.32846716" />
@@ -461,7 +433,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4997233" weight="0.33693305" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50080776" side_tool="true" weight="0.35766423" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3211679" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32026768" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24970828" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -488,22 +460,21 @@
           <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Quatro/Heuristic.java</url>
-          <line>20</line>
+          <url>file://$PROJECT_DIR$/src/MarcSanchez/Player1.java</url>
+          <line>55</line>
           <properties />
-          <option name="timeStamp" value="199" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Quatro/Node.java</url>
-          <line>78</line>
-          <properties />
-          <option name="timeStamp" value="201" />
+          <option name="timeStamp" value="256" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="h.matrix" language="JAVA" />
+        <watch expression="tree.isLeaf()" language="JAVA" />
+        <watch expression="n.isLeaf()" language="JAVA" />
+        <watch expression="tree.isLeaf()" language="JAVA" />
+        <watch expression="node.isLeaf()" language="JAVA" />
+        <watch expression="this.nodes[0].isLeaf()" language="JAVA" />
+        <watch expression="node.isLeaf()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -513,6 +484,31 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>n.isLeaf()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>node.isLeaf()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.nodes[0].isLeaf()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>tree.isLeaf()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.isLeaf()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>h.matrix</expression-string>
         <language-id>JAVA</language-id>
@@ -533,18 +529,28 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>value</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>nodes.length</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>value.getHeuristic()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.matrix[i].fours</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>node.isLeaf()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>node.max</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>h.getPiece()</expression-string>
         <language-id>JAVA</language-id>
@@ -566,27 +572,7 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>value.getHeuristic()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
         <expression-string>piece.getProperties()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>decorated.iisLeaf()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>alfa.getHeuristic()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>value.isLeaf()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -672,20 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Player3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/MinIMax.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/ImageRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -705,11 +677,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Piece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-753">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#348#349#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -739,22 +708,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/AlphaBeta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Player1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="21" column="78" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="78" />
+        <state relative-caret-position="105">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Combination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="120">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -787,18 +749,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Heuristic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="103" column="25" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
-          <folding>
-            <element signature="e#1152#1153#0" expanded="true" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1234#1235#0" expanded="true" />
-            <element signature="e#1282#1283#0" expanded="true" />
-            <element signature="e#1891#1892#0" expanded="true" />
-            <element signature="e#1979#1980#0" expanded="true" />
-            <element signature="e#3978#3979#0" expanded="true" />
-            <element signature="e#4018#4019#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -811,80 +763,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state relative-caret-position="135">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        <state relative-caret-position="460">
+          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#1349#1350#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java">
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Player3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#132#133#0" expanded="true" />
-            <element signature="e#174#175#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="201">
+          <caret line="91" column="17" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quatro/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
-          <folding>
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#5623#5624#0" expanded="true" />
-            <element signature="e#5662#5663#0" expanded="true" />
-            <element signature="e#5797#5798#0" expanded="true" />
-            <element signature="e#5827#5828#0" expanded="true" />
-            <element signature="e#6056#6057#0" expanded="true" />
-            <element signature="e#6104#6105#0" expanded="true" />
-            <element signature="e#6578#6579#0" expanded="true" />
-            <element signature="e#6605#6606#0" expanded="true" />
-            <element signature="e#6736#6737#0" expanded="true" />
-            <element signature="e#6779#6780#0" expanded="true" />
-            <element signature="e#6959#6960#0" expanded="true" />
-            <element signature="e#7012#7013#0" expanded="true" />
-            <element signature="e#7058#7059#0" expanded="true" />
-            <element signature="e#7134#7135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#891#892#0" expanded="true" />
-            <element signature="e#932#933#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="88" column="7" lean-forward="true" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Piece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="388">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#433#434#0" expanded="true" />
@@ -895,40 +811,102 @@
             <element signature="e#586#587#0" expanded="true" />
             <element signature="e#650#651#0" expanded="true" />
             <element signature="e#710#711#0" expanded="true" />
-            <element signature="e#1805#1806#0" expanded="true" />
-            <element signature="e#1852#1853#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2192#2193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/MinIMax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Player1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/NodeFantasma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="e#132#133#0" expanded="true" />
+            <element signature="e#174#175#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MarcSanchez/TaulerInicial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="375">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Heuristic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="125" column="70" lean-forward="true" selection-start-line="125" selection-start-column="70" selection-end-line="125" selection-end-column="70" />
+        <state relative-caret-position="193">
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
           <folding>
-            <element signature="e#1109#1110#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
-            <element signature="e#1717#1718#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1811#1812#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/AlphaBeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Player1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="59" column="65" lean-forward="true" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="570">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
           <folding>
             <element signature="e#447#448#0" expanded="true" />
             <element signature="e#483#484#0" expanded="true" />
@@ -936,42 +914,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/AlphaBeta.java">
+    <entry file="file://$PROJECT_DIR$/src/Quatro/Tauler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/CombinationDecorator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="47" column="27" lean-forward="true" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-          <folding>
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarcSanchez/Player1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="27" column="99" selection-start-line="27" selection-start-column="99" selection-end-line="27" selection-end-column="99" />
+        <state relative-caret-position="210">
+          <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#197#198#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -14,11 +14,6 @@ public class TaulerInicial extends Node{
     }
 
     @Override
-    public Heuristic evalHeuristic() {
-        return new Heuristic(this.firstPiece);
-    }
-
-    @Override
     public int getHeuristic() {
         return 0;
     }

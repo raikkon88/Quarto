@@ -13,11 +13,8 @@ public abstract class Node {
     protected Set<Position> free;
     protected boolean max;
     protected int heuristicValue;
-    protected Heuristic heuristic;
-
 
     public void setPiece(Piece piece){this.piece = piece;}
-    public void setPosition(Position pos){this.position = pos;}
     public int getLevel(){ return level;}
     public boolean isMax(){return max;}
     public void setHeuristic(int heuristic){ this.heuristicValue= heuristic;}
@@ -34,8 +31,6 @@ public abstract class Node {
         this.free = freePositions;
     }
 
-    public abstract Heuristic evalHeuristic();
-
     public abstract int getHeuristic();
 
     public abstract boolean isLeaf();
@@ -49,8 +44,8 @@ public abstract class Node {
             for(Position pos : free){
                 Node n = new CombinationDecorator(this, new Position(pos), new Piece(p));
                 nodes.add(n);
-                Set<Position> tmpPos = new HashSet<>(free);
-                Set<Piece> tmpPiece  = new HashSet<>(toPlay);
+                HashSet<Position> tmpPos = new HashSet<>(free);
+                HashSet<Piece> tmpPiece  = new HashSet<>(toPlay);
                 tmpPos.remove(pos);
                 tmpPiece.remove(p);
                 n.setFreePositions(tmpPos);
@@ -63,6 +58,6 @@ public abstract class Node {
 
     @Override
     public String toString() {
-        return this.position + " - P > " + this.piece + " - H > " + this.heuristic + " - N > " + this.level + " - M > " + this.isMax();
+        return this.position + " - P > " + this.piece + " - H > " + this.heuristicValue + " - N > " + this.level + " - M > " + this.isMax();
     }
 }

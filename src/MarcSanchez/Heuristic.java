@@ -12,34 +12,32 @@ public class Heuristic {
     private static final int HEU_ROWS = 10;
     public static final int HEURISTIC_MAX = 100000;
 
-    int heuristic;
-    boolean finished;
     HeuristicRow[] matrix;
+    int value;
+    boolean finished;
     Piece nextPiece;
+    boolean calculated;
 
     public Heuristic(Piece value){
-        this.heuristic = 0;
+        this.value = 0;
         this.nextPiece = new Piece(value);
         this.matrix = new HeuristicRow[HEU_ROWS];
+        this.finished = false;
+        this.calculated = false;
         for(int i = 0; i < HEU_ROWS; i++){
             matrix[i] = new HeuristicRow();
         }
     }
 
-    public int getValue(int level, boolean isMax){
-        if(this.finished){
-            this.heuristic = HEURISTIC_MAX * (16 - level);
-        }
-        else{
-            for(int i = 0; i < HEU_ROWS; i++){
-                this.heuristic +=  matrix[i].finalPoints;
+    public int getValue(){
+        if(!calculated){
+            for(int i = 0; i < Heuristic.HEU_ROWS; i++){
+                value +=  matrix[i].finalPoints;
             }
+            calculated = true;
+            return value;
         }
-
-        if (isMax) {
-            this.heuristic *= -1;
-        }
-        return this.heuristic;
+        return value;
     }
 
     public Piece getPiece(){
@@ -54,9 +52,13 @@ public class Heuristic {
         if(row == 3-col) finished = matrix[9].addValue(piece.getProperties(), isMax) || finished;
     }
 
+    public boolean isFinished(){
+        return finished;
+    }
+
     @Override
     public String toString() {
-        return this.heuristic + "  |  " + (this.finished ? "Final" : "No Final");
+        return getValue() + "  |  " + (isFinished() ? "Final" : "No Final");
     }
 
     // giving a value for each kind of number that can give.
@@ -106,8 +108,11 @@ public class Heuristic {
                     else
                         finalPoints += 100;
                 }
-                else{
+                else if (partial == 4){
                     fours++;
+                }
+                else {
+                    // Nothing to do, we don't want to evaluate the 0's.
                 }
                 copy /= 10;
             }

@@ -13,7 +13,7 @@ import java.util.Set;
  * ------------------------------
  * TODO : Comentar punts crítics.
  */
-public class Position {
+public class Position implements Cloneable {
 
     private int x;
     private int y;
@@ -59,6 +59,10 @@ public class Position {
         }
     }
 
+    @Override
+    protected Object clone() {
+        return new Position(x, y);
+    }
 
     @Override
     public String toString() {

@@ -10,7 +10,7 @@ import java.util.Set;
  * ------------------------------
  * TODO : Comentar punts crítics.
  */
-public class Piece {
+public class Piece implements Cloneable{
 
     protected int piece;
 
@@ -83,6 +83,11 @@ public class Piece {
         else  {
             return ((Piece) obj).piece == piece;
         }
+    }
+
+    @Override
+    protected Object clone() {
+        return new Piece(piece);
     }
 
     @Override

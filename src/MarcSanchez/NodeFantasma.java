@@ -9,11 +9,6 @@ public class NodeFantasma extends Node {
     }
 
     @Override
-    public Heuristic evalHeuristic() {
-        return new Heuristic(new Piece(2222));
-    }
-
-    @Override
     public int getHeuristic() {
         return heuristic;
     }
